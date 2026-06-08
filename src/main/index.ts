@@ -23,6 +23,7 @@ import { enrichMessage } from './assistant';
 import { readAgentUsage, readContextTokens } from './transcript';
 import { listIssues, listCIRuns } from './github';
 import { SlackWebhookServer } from './slack';
+import { TelegramGroupBridge, type TelegramGroupMessage } from './telegram';
 import { TelemetryCollector } from './telemetry';
 import { ControlRegistry } from './control';
 
@@ -490,6 +491,41 @@ function armHeartbeat(m: ScheduledMission): void {
 function liveWebContents(): Electron.WebContents | null {
   const wc = mainWindow?.webContents;
   return wc && !wc.isDestroyed() ? wc : null;
+}
+
+// ─── Telegram group bridge (Office group chat ↔ hive) ────────────────────────
+/** The running Telegram long-poll bridge, or null when disabled/stopped. */
+let telegramBridge: TelegramGroupBridge | null = null;
+
+function startTelegramBridge(): { ok: boolean; error?: string } {
+  const cfg = readConfig();
+  if (!cfg.telegramEnabled || !cfg.telegramBotToken || !cfg.telegramGroupChatId) {
+    return { ok: false, error: 'telegram disabled or missing botToken/groupChatId' };
+  }
+  telegramBridge?.stop();
+  telegramBridge = new TelegramGroupBridge({
+    botToken: cfg.telegramBotToken,
+    groupChatId: cfg.telegramGroupChatId,
+    onMessage: (msg: TelegramGroupMessage) => {
+      // Fan to renderer (chat panel display).
+      try { liveWebContents()?.send('telegram:groupMessage', msg); } catch { /* window gone */ }
+      // Route non-bot messages into the hive as requests to michael.
+      if (!msg.isBot && hive.enabled()) {
+        hive.send(
+          { to: 'god', act: 'request', subject: `Telegram: ${msg.fromName}`, body: msg.text },
+          'telegram'
+        );
+      }
+    },
+    onError: (err) => console.error('[telegram]', err)
+  });
+  telegramBridge.start();
+  return { ok: true };
+}
+
+function stopTelegramBridge(): void {
+  try { telegramBridge?.stop(); } catch (e) { console.error('[telegram] stop failed:', e); }
+  telegramBridge = null;
 }
 
 // ─── Slack webhook server (Slack message → Michael's queue) ──────────────────
@@ -987,6 +1023,7 @@ ipcMain.handle('app:confirmClose', () => {
   try { hookServer.stop(); } catch (e) { console.error('[quit] hookServer.stop:', e); }
   try { telemetry.stop(); } catch (e) { console.error('[quit] telemetry.stop:', e); }
   try { stopSlackServer(); } catch (e) { console.error('[quit] slack.stop:', e); }
+  try { stopTelegramBridge(); } catch (e) { console.error('[quit] telegram.stop:', e); }
   try { memory.stop(); } catch (e) { console.error('[quit] memory.stop:', e); }
   try { reflector.stop(); } catch (e) { console.error('[quit] reflector.stop:', e); }
   try { persist.close(); } catch (e) { console.error('[quit] persist.close:', e); }
@@ -1006,6 +1043,7 @@ ipcMain.handle('app:resetAll', () => {
   try { hookServer.stop(); } catch (e) { console.error('[reset] hookServer.stop:', e); }
   try { telemetry.stop(); } catch (e) { console.error('[reset] telemetry.stop:', e); }
   try { stopSlackServer(); } catch (e) { console.error('[reset] slack.stop:', e); }
+  try { stopTelegramBridge(); } catch (e) { console.error('[reset] telegram.stop:', e); }
   try { memory.stop(); } catch (e) { console.error('[reset] memory.stop:', e); }
   try { reflector.stop(); } catch (e) { console.error('[reset] reflector.stop:', e); }
   try { persist.close(); } catch (e) { console.error('[reset] persist.close:', e); }
@@ -1159,6 +1197,26 @@ ipcMain.handle('github:ciRuns', (_evt, cwd: unknown) =>
 // ─── IPC: desktop notifications toggle ──────────────────────────────────────
 ipcMain.handle('app:setNotifications', (_evt, val) => writeConfig({ notifications: val === true }));
 
+// ─── IPC: Telegram group bridge ─────────────────────────────────────────────
+ipcMain.handle('telegram:start', () => startTelegramBridge());
+ipcMain.handle('telegram:stop', () => { stopTelegramBridge(); return { ok: true }; });
+ipcMain.handle('telegram:send', async (_evt, text: unknown) => {
+  if (typeof text !== 'string' || !text.trim()) return { ok: false, error: 'empty text' };
+  if (!telegramBridge) return { ok: false, error: 'bridge not running' };
+  return telegramBridge.sendMessage(text);
+});
+ipcMain.handle('telegram:setConfig', (_evt, patch: unknown) => {
+  const p = (patch ?? {}) as { botToken?: unknown; groupChatId?: unknown; enabled?: unknown };
+  const next: Parameters<typeof writeConfig>[0] = {};
+  if (typeof p.botToken === 'string') next.telegramBotToken = p.botToken.trim() || undefined;
+  if (typeof p.groupChatId === 'number') next.telegramGroupChatId = p.groupChatId;
+  if (typeof p.enabled === 'boolean') next.telegramEnabled = p.enabled;
+  writeConfig(next);
+  const cfg = readConfig();
+  if (!cfg.telegramEnabled || !cfg.telegramBotToken) stopTelegramBridge();
+  return { ok: true };
+});
+
 // ─── IPC: Slack integration ─────────────────────────────────────────────────
 ipcMain.handle('slack:start', () => startSlackServer());
 ipcMain.handle('slack:stop', () => { stopSlackServer(); return { ok: true }; });
@@ -1202,6 +1260,13 @@ function bootstrapHiveServices(): void {
   });
   memory.start(); // init shared palace + mine loop (no-op without mempalace)
   reflector.start(); // bound oversized memory.md files on a timer (no-op until threshold)
+  // Auto-start the Telegram bridge when configured.
+  const tgCfg = readConfig();
+  if (tgCfg.telegramEnabled && tgCfg.telegramBotToken && tgCfg.telegramGroupChatId) {
+    const r = startTelegramBridge();
+    if (!r.ok) console.error('[telegram] auto-start failed:', r.error);
+    else console.log('[telegram] group bridge polling chat', tgCfg.telegramGroupChatId);
+  }
 
   // Always-on beats (decoupled from the optional heartbeat): the live fleet
   // snapshot Michael reads (~8s) + the breaker/cost-ledger beat (~30s). Guarded so

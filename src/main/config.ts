@@ -152,6 +152,14 @@ export interface HarnessConfig {
   /** Local HTTP port the webhook server binds to (default 3847). */
   slackPort?: number;
 
+  // ─── Telegram group bridge (Munder Difflin office chat) ────────────────────
+  /** Master toggle for the Telegram group bridge. */
+  telegramEnabled?: boolean;
+  /** Bot token used to poll + send (e.g. ClawedMichaelBot). */
+  telegramBotToken?: string;
+  /** Telegram group chat_id to listen on (e.g. -5254720802). */
+  telegramGroupChatId?: number;
+
   // ─── Memory reflection (the janitor's condense half) ───────────────────────
   /** Master toggle for the in-process MemoryReflector. Default on. */
   reflectEnabled?: boolean;
@@ -184,6 +192,9 @@ const DEFAULTS: HarnessConfig = {
   slackBotToken: undefined,
   slackChannelId: undefined,
   slackPort: undefined,
+  telegramEnabled: false,
+  telegramBotToken: undefined,
+  telegramGroupChatId: undefined,
   // Memory reflection — preventive; nobody is over threshold today, so it sits
   // dark until an agent's memory crosses one of these (the verify gate is the
   // safety for the LLM step). Thresholds DECIDED by god 2026-06-06.
