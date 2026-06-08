@@ -18,6 +18,12 @@ type SlackConfig = HarnessConfig & {
   slackPort?: number;
 };
 
+type TelegramConfig = HarnessConfig & {
+  telegramEnabled?: boolean;
+  telegramBotToken?: string;
+  telegramGroupChatId?: number;
+};
+
 /** Pixel-aesthetic text input, mirroring AddAgentModal's inputStyle. */
 const slackInputStyle: CSSProperties = {
   width: '100%',
@@ -119,6 +125,14 @@ export function SettingsModal({ config, onClose }: SettingsModalProps) {
   const [slackBusy, setSlackBusy] = useState(false);
   const [slackNote, setSlackNote] = useState('');
 
+  // ─── Telegram group bridge ─────────────────────────────────────────────────
+  const tgCfg = config as TelegramConfig;
+  const [tgEnabled, setTgEnabled] = useState(tgCfg.telegramEnabled ?? false);
+  const [tgToken, setTgToken] = useState(tgCfg.telegramBotToken ?? '');
+  const [tgChatId, setTgChatId] = useState(tgCfg.telegramGroupChatId != null ? String(tgCfg.telegramGroupChatId) : '');
+  const [tgBusy, setTgBusy] = useState(false);
+  const [tgNote, setTgNote] = useState('');
+
   // Re-seed every editable field from the on-disk config when the modal opens.
   // App's `config` prop is loaded once and never refreshed after a save, so
   // without this the saved budget / velocity / slack values show blank on reopen.
@@ -126,7 +140,7 @@ export function SettingsModal({ config, onClose }: SettingsModalProps) {
     let alive = true;
     window.cth.getConfig().then((c) => {
       if (!alive) return;
-      const cc = c as BreakerCfgView & SlackConfig & { notifications?: boolean };
+      const cc = c as BreakerCfgView & SlackConfig & TelegramConfig & { notifications?: boolean };
       setNotifications(cc.notifications === true);
       setAgentBudget(cc.costCapTokens != null ? String(cc.costCapTokens) : '');
       setVelocityCeiling(cc.circuitBreaker?.tokenVelocityPerMin != null ? String(cc.circuitBreaker.tokenVelocityPerMin) : '');
@@ -134,6 +148,9 @@ export function SettingsModal({ config, onClose }: SettingsModalProps) {
       setSlackSecret(cc.slackSigningSecret ?? '');
       setSlackChannel(cc.slackChannelId ?? '');
       setSlackPort(String(cc.slackPort ?? 3847));
+      setTgEnabled(cc.telegramEnabled ?? false);
+      setTgToken(cc.telegramBotToken ?? '');
+      setTgChatId(cc.telegramGroupChatId != null ? String(cc.telegramGroupChatId) : '');
     }).catch(() => { /* keep prop-seeded values */ });
     return () => { alive = false; };
   }, []);
@@ -182,6 +199,36 @@ export function SettingsModal({ config, onClose }: SettingsModalProps) {
   };
 
   const copyTunnel = () => { void window.cth.copyToClipboard(tunnelUrl); };
+
+  // ─── Telegram handlers ─────────────────────────────────────────────────────
+  const saveTelegram = async () => {
+    setTgBusy(true); setTgNote('');
+    try {
+      await window.cth.telegramSetConfig({
+        botToken: tgToken, groupChatId: Number(tgChatId) || undefined, enabled: tgEnabled
+      });
+      setTgNote('saved');
+    } catch (e) { setTgNote(e instanceof Error ? e.message : String(e)); }
+    finally { setTgBusy(false); setTimeout(() => setTgNote(''), 2000); }
+  };
+
+  const startTelegram = async () => {
+    setTgBusy(true); setTgNote('');
+    try {
+      await window.cth.telegramSetConfig({ botToken: tgToken, groupChatId: Number(tgChatId) || undefined, enabled: true });
+      setTgEnabled(true);
+      const res = await window.cth.telegramStart();
+      setTgNote(res.ok ? 'polling' : (res.error ?? 'failed'));
+    } catch (e) { setTgNote(e instanceof Error ? e.message : String(e)); }
+    finally { setTgBusy(false); }
+  };
+
+  const stopTelegram = async () => {
+    setTgBusy(true); setTgNote('');
+    try { await window.cth.telegramStop(); setTgNote('stopped'); }
+    catch (e) { setTgNote(e instanceof Error ? e.message : String(e)); }
+    finally { setTgBusy(false); }
+  };
 
   const reset = async () => {
     setBusy(true);
@@ -473,6 +520,67 @@ export function SettingsModal({ config, onClose }: SettingsModalProps) {
                       Request URL above → reinstall to your workspace. The tunnel URL changes on every
                       restart, so re-paste it after pressing Start again.
                     </span>
+                  </div>
+                )}
+              </div>
+
+              <div style={{ height: 2, background: 'var(--cth-ink-300)' }} />
+
+              {/* Telegram group bridge */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                    <span style={{ fontSize: 14, lineHeight: '20px', color: 'var(--cth-ink-900)' }}>
+                      Telegram group bridge
+                    </span>
+                    <span style={{ fontSize: 12, lineHeight: '16px', color: 'var(--cth-ink-500)' }}>
+                      Pipe the Munder Difflin group chat into Michael's queue.
+                    </span>
+                  </div>
+                  <PixelButton
+                    variant={tgEnabled ? 'primary' : 'secondary'}
+                    size="sm"
+                    onClick={() => setTgEnabled((v) => !v)}
+                  >
+                    {tgEnabled ? 'on' : 'off'}
+                  </PixelButton>
+                </div>
+
+                {tgEnabled && (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                    <label style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+                      <span style={slackLabelStyle}>Bot token (ClawedMichaelBot)</span>
+                      <input
+                        type="password"
+                        value={tgToken}
+                        onChange={(e) => setTgToken(e.target.value)}
+                        placeholder="1234567890:AAE…"
+                        style={{ ...slackInputStyle, fontFamily: 'var(--cth-font-mono)' }}
+                      />
+                    </label>
+                    <label style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+                      <span style={slackLabelStyle}>Group chat ID</span>
+                      <input
+                        value={tgChatId}
+                        onChange={(e) => setTgChatId(e.target.value)}
+                        placeholder="-5254720802"
+                        style={{ ...slackInputStyle, fontFamily: 'var(--cth-font-mono)', width: 180 }}
+                      />
+                    </label>
+                    <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+                      <PixelButton variant="primary" size="sm" onClick={startTelegram} disabled={tgBusy || !tgToken.trim() || !tgChatId.trim()}>
+                        {tgBusy ? '…' : 'start'}
+                      </PixelButton>
+                      <PixelButton variant="secondary" size="sm" onClick={stopTelegram} disabled={tgBusy}>
+                        stop
+                      </PixelButton>
+                      <PixelButton variant="ghost" size="sm" onClick={saveTelegram} disabled={tgBusy}>
+                        save
+                      </PixelButton>
+                      {tgNote && (
+                        <span style={{ fontSize: 12, color: 'var(--cth-ink-500)' }}>{tgNote}</span>
+                      )}
+                    </div>
                   </div>
                 )}
               </div>

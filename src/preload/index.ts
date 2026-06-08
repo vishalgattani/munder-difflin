@@ -540,7 +540,37 @@ const api = {
   slackSetConfig: (patch: {
     signingSecret?: string; botToken?: string; channelId?: string; port?: number; enabled?: boolean;
   }): Promise<{ ok: boolean }> =>
-    ipcRenderer.invoke('slack:setConfig', patch)
+    ipcRenderer.invoke('slack:setConfig', patch),
+
+  // ─── Telegram group bridge (Office group chat ↔ hive) ──────────────────────
+  /** Register a listener for inbound Telegram group messages; returns unsubscribe fn. */
+  onTelegramMessage: (cb: (msg: {
+    messageId: number; fromName: string; fromUsername?: string;
+    isBot: boolean; text: string; date: number;
+  }) => void): (() => void) => {
+    const listener = (_e: IpcRendererEvent, msg: unknown) => cb(msg as Parameters<typeof cb>[0]);
+    ipcRenderer.on('telegram:groupMessage', listener);
+    return () => ipcRenderer.removeListener('telegram:groupMessage', listener);
+  },
+  /** Start the Telegram long-poll bridge. */
+  telegramStart: (): Promise<{ ok: boolean; error?: string }> =>
+    ipcRenderer.invoke('telegram:start'),
+  /** Stop the Telegram long-poll bridge. */
+  telegramStop: (): Promise<{ ok: boolean }> =>
+    ipcRenderer.invoke('telegram:stop'),
+  /** Send a message to the configured Telegram group. */
+  telegramSend: (text: string): Promise<{ ok: boolean; error?: string }> =>
+    ipcRenderer.invoke('telegram:send', text),
+  /** Persist Telegram settings (and stop the bridge if disabled / token cleared). */
+  telegramSetConfig: (patch: {
+    botToken?: string; groupChatId?: number; enabled?: boolean;
+  }): Promise<{ ok: boolean }> =>
+    ipcRenderer.invoke('telegram:setConfig', patch),
+
+  // ─── App git branch ─────────────────────────────────────────────────────────
+  /** Current git branch the app is running from (reads the app's own repo). */
+  appGitBranch: (): Promise<{ current?: string } | { error: string }> =>
+    ipcRenderer.invoke('app:gitBranch')
 };
 
 contextBridge.exposeInMainWorld('cth', api);

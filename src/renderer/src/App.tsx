@@ -37,12 +37,20 @@ export function App() {
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [quitWarn, setQuitWarn] = useState<{ ptyCount: number } | null>(null);
   const [vpWidth, setVpWidth] = useState<number>(window.innerWidth);
+  const [gitBranch, setGitBranch] = useState<string>('');
 
   // Initial config load
   useEffect(() => {
     let cancelled = false;
     window.cth.getConfig().then(c => { if (!cancelled) setConfig(c); });
     return () => { cancelled = true; };
+  }, []);
+
+  // Read the app's own git branch once on mount.
+  useEffect(() => {
+    window.cth.appGitBranch().then((r) => {
+      if ('current' in r && r.current) setGitBranch(r.current);
+    }).catch(() => { /* not a git repo or git unavailable */ });
   }, []);
 
   // Quit warning subscription
@@ -135,8 +143,21 @@ export function App() {
           fontSize: 14,
           color: 'var(--cth-ink-500)'
         }}>
-          v0.1 · {config.autoMode ? 'auto mode on' : 'auto mode off'}
+          v0.2.2 · {config.autoMode ? 'auto mode on' : 'auto mode off'}
         </span>
+        {gitBranch && (
+          <span style={{
+            fontFamily: 'var(--cth-font-mono)',
+            fontSize: 11,
+            color: 'var(--cth-ink-400)',
+            background: 'var(--cth-paper-100)',
+            boxShadow: 'inset 0 0 0 1px var(--cth-ink-300)',
+            padding: '1px 6px',
+            borderRadius: 2,
+          }}>
+            {gitBranch}
+          </span>
+        )}
         <button
           className="cth-titlebar-nodrag cth-settings-btn"
           onClick={() => setSettingsOpen(true)}

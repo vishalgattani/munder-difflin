@@ -1194,6 +1194,9 @@ ipcMain.handle('github:ciRuns', (_evt, cwd: unknown) =>
   typeof cwd === 'string' ? listCIRuns(cwd) : { ok: false, error: 'no cwd' }
 );
 
+// ─── IPC: app git branch (branch the app itself is running from) ─────────────
+ipcMain.handle('app:gitBranch', () => getBranch(app.getAppPath()));
+
 // ─── IPC: desktop notifications toggle ──────────────────────────────────────
 ipcMain.handle('app:setNotifications', (_evt, val) => writeConfig({ notifications: val === true }));
 
