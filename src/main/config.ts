@@ -175,6 +175,16 @@ export interface HarnessConfig {
   /** Never condense a file smaller than this; also the section-trigger byte floor.
    *  DECIDED: 16 KB. */
   reflectMinBytes?: number;
+
+  // ─── Bare terminals (OpenClaw integration) ─────────────────────────────────
+  /** When true, agents spawn as plain shells (zsh) instead of Claude Code PTYs.
+   *  The cwd is set to vaultRoot. The agent appears "active" in the UI with a
+   *  working terminal but cannot run Claude Code. Used when the Electron app
+   *  serves as a dashboard for OpenClaw agents rather than a Claude harness. */
+  bareTerminals?: boolean;
+  /** Path to the vault root — used as the working directory for bare terminals.
+   *  Default: ~/Desktop/my-brain-in-logseq */
+  vaultRoot?: string;
 }
 
 const DEFAULTS: HarnessConfig = {
@@ -203,7 +213,9 @@ const DEFAULTS: HarnessConfig = {
   reflectByteTriggerPct: 50,
   reflectSectionTrigger: 50,
   reflectRecentKeep: 12,
-  reflectMinBytes: 16_384
+  reflectMinBytes: 16_384,
+  bareTerminals: false,
+  vaultRoot: homedir() + '/Desktop/my-brain-in-logseq'
 };
 
 function configPath(): string {

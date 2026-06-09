@@ -141,9 +141,70 @@ export function useHive(config: HarnessConfig | null): void {
   // back to 'working' (the flicker the spec calls out); only a genuine Stop clears it.
   const breakerLevel = useRef<Record<string, string>>({});
 
+  // 0) Bootstrap bare terminals (OpenClaw integration) — spawn plain zsh shells
+  //    for all 4 office agents at vaultRoot instead of Claude Code PTYs.
+  useEffect(() => {
+    if (!config?.onboardingComplete) return;
+    if (!config.bareTerminals) return;
+    let cancelled = false;
+    const vaultRoot = config.vaultRoot || `${process.env.HOME ?? ''}/Desktop/my-brain-in-logseq`;
+    const shell = 'zsh';
+
+    const OFFICE_AGENTS = [
+      { id: 'michael', name: 'Michael', character: 'michael', accent: 'lemon', description: 'regional manager — runs the floor, delegates to the team', isGod: true },
+      { id: 'jim', name: 'Jim', character: 'jim', accent: 'blue', description: 'sales — pranks dwight, handles frontend work' },
+      { id: 'dwight', name: 'Dwight', character: 'dwight', accent: 'orange', description: 'assistant (to the) regional manager — security + code quality' },
+      { id: 'pam', name: 'Pam', character: 'pam', accent: 'pink', description: 'receptionist — documentation + testing' },
+    ];
+
+    const spawnBareAgent = async (agent: typeof OFFICE_AGENTS[number]) => {
+      const ptyId = `pty-${agent.id}`;
+      const live = await window.cth.listPtys().catch(() => []);
+      if (live.some((p) => p.id === ptyId)) return; // already running
+      const res = await window.cth.spawnPty({
+        id: ptyId,
+        cwd: vaultRoot,
+        command: shell,
+        args: [],
+        cols: 100,
+        rows: 30,
+        hive: { id: agent.id, name: agent.name, cwd: vaultRoot, isGod: !!agent.isGod, role: agent.description }
+      });
+      if (!res.ok || cancelled) return;
+      useStore.getState().addAgent({
+        id: agent.id,
+        name: agent.name,
+        character: agent.character,
+        accent: agent.accent,
+        description: agent.description,
+        project: 'office',
+        tmuxTarget: '',
+        cwd: vaultRoot,
+        status: 'idle',
+        action: 'at desk',
+        progress: 0,
+        currentStation: 'desk',
+        ptyId,
+        command: shell,
+        isGod: !!agent.isGod,
+        recentTextTs: Date.now()
+      });
+      if (agent.isGod) useStore.getState().setGodStatus('ready');
+    };
+
+    // Stagger spawns so PTYs don't collide
+    OFFICE_AGENTS.forEach((agent, i) => {
+      setTimeout(() => { if (!cancelled) spawnBareAgent(agent); }, i * 500);
+    });
+
+    return () => { cancelled = true; };
+  }, [config?.onboardingComplete, config?.bareTerminals, config?.vaultRoot]);
+
   // 1) Bootstrap the god agent (source of truth = live PTYs, to dodge restarts).
+  //    SKIPPED when bareTerminals is enabled (effect #0 handles it).
   useEffect(() => {
     if (!config?.onboardingComplete || !config.harnessHome) return;
+    if (config.bareTerminals) return; // skip — bare terminals bootstrap handles it
     let cancelled = false;
     const timers: ReturnType<typeof setTimeout>[] = [];
     useStore.getState().setGodStatus('booting');
@@ -216,8 +277,10 @@ export function useHive(config: HarnessConfig | null): void {
 
   // 1b) Bootstrap Michael's prep assistant ("Dwight") — only after Michael is
   //     ready, and only once. Same live-PTY idempotency + spawn-guard as #1.
+  //     SKIPPED when bareTerminals is enabled.
   useEffect(() => {
     if (!config?.onboardingComplete || !config.harnessHome) return;
+    if (config.bareTerminals) return; // skip — bare terminals handles all agents
     if (godStatus !== 'ready') return;
     let cancelled = false;
     const t = setTimeout(async () => {
@@ -430,8 +493,10 @@ export function useHive(config: HarnessConfig | null): void {
   //    moment the agent goes idle. This is what lets the user keep sending
   //    messages while the agent's "cloud terminal" is mid-run: the messages
   //    park in the store and get typed in (and submitted) as soon as it's free.
+  //    SKIPPED when bareTerminals is enabled (no PTY message injection).
   useEffect(() => {
     if (!config?.onboardingComplete) return;
+    if (config.bareTerminals) return; // skip — bare terminals don't use PTY message injection
     const FLUSH_COOLDOWN_MS = 4500;
 
     // Send the front of `srcId`'s queue into `target`'s pty (verbatim or wrapped),

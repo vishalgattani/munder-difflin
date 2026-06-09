@@ -51,6 +51,15 @@ export interface HarnessConfig {
   agentTokenCaps?: Record<string, number>;
   maxTurns?: number;
   circuitBreaker?: CircuitBreakerConfig;
+  /** Telegram group bridge settings */
+  telegramEnabled?: boolean;
+  telegramBotToken?: string;
+  telegramGroupChatId?: number;
+  /** Bare terminals mode (OpenClaw integration) — spawn plain shells instead
+   *  of Claude Code PTYs. */
+  bareTerminals?: boolean;
+  /** Path to the vault root — used as cwd for bare terminals. */
+  vaultRoot?: string;
 }
 
 /** The Sonnet model with the 1M-token context window — used for Michael's prep

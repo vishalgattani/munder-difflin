@@ -677,6 +677,27 @@ ipcMain.handle('pty:spawn', async (_evt, opts: SpawnOptions & { hive?: AgentMeta
   if (!opts || typeof opts.id !== 'string' || typeof opts.cwd !== 'string' || typeof opts.command !== 'string') {
     return { ok: false, error: 'invalid SpawnOptions' };
   }
+
+  // ─── Bare terminals mode (OpenClaw integration) ──────────────────────
+  // When enabled, agents spawn as plain shells instead of Claude Code PTYs.
+  // The cwd is set to vaultRoot, args are cleared, and hive injection is skipped.
+  const cfg = readConfig();
+  if (cfg.bareTerminals) {
+    const vaultRoot = cfg.vaultRoot ?? join(homedir(), 'Desktop/my-brain-in-logseq');
+    const shell = process.env.SHELL ?? '/bin/zsh';
+    console.log(`[bare-terminals] spawning ${opts.hive?.id ?? opts.id} → ${shell} at ${vaultRoot}`);
+    opts.command = shell;
+    opts.args = [];
+    opts.cwd = vaultRoot;
+    opts.env = { ...(opts.env ?? {}), VAULT_ROOT: vaultRoot };
+    // Skip hive injection, Claude args, and permission prompts — this is a bare shell.
+    const res = ptyManager.spawn(opts);
+    if (opts.hive?.id) ptyToAgent.set(opts.id, opts.hive.id);
+    syncKeepAwake();
+    return res;
+  }
+  // ─────────────────────────────────────────────────────────────────────
+
   // Git isolation: when requested and the cwd is a real repo, give this agent
   // its own worktree on an `agent/<id>` branch so it can't clobber other agents'
   // (or the user's) working tree. Best-effort — a failure falls back to the
