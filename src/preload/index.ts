@@ -567,6 +567,10 @@ const api = {
   }): Promise<{ ok: boolean }> =>
     ipcRenderer.invoke('telegram:setConfig', patch),
 
+  /** Send a queued message to the Telegram group (bare terminals mode). */
+  telegramQueueSend: (text: string): Promise<{ ok: boolean; error?: string }> =>
+    ipcRenderer.invoke('telegram:queueSend', text),
+
   // ─── App git branch ─────────────────────────────────────────────────────────
   /** Current git branch the app is running from (reads the app's own repo). */
   appGitBranch: (): Promise<{ current?: string } | { error: string }> =>

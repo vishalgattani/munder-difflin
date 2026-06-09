@@ -1264,6 +1264,32 @@ ipcMain.handle('slack:setConfig', (_evt, patch: unknown) => {
   return { ok: true };
 });
 
+// ─── IPC: Telegram queue send (bare terminals → Telegram group) ────────────
+ipcMain.handle('telegram:queueSend', async (_evt, text: string) => {
+  const cfg = readConfig();
+  const chatId = cfg.telegramGroupChatId;
+  if (!chatId) return { ok: false, error: 'no group chat ID configured' };
+  const script = join(process.env.HOME ?? '', 'Desktop/my-brain-in-logseq/scripts/python/telegram_user_send.py');
+  const python = join(process.env.HOME ?? '', 'miniconda3/envs/conda_vault/bin/python');
+  if (!existsSync(script)) return { ok: false, error: 'telegram_user_send.py not found' };
+  if (!existsSync(python)) return { ok: false, error: 'conda_vault python not found' };
+  try {
+    const child = spawn(python, [script, '--send', text, '--chat-id', String(chatId)], {
+      stdio: ['pipe', 'pipe', 'pipe'],
+      env: { ...process.env }
+    });
+    let stderr = '';
+    child.stderr?.on('data', d => { stderr += d.toString(); });
+    return new Promise(resolve => {
+      child.on('close', code => {
+        resolve(code === 0 ? { ok: true } : { ok: false, error: stderr.trim() || `exit ${code}` });
+      });
+    });
+  } catch (e) {
+    return { ok: false, error: String(e) };
+  }
+});
+
 /** Start every hive-bound background service against the current harnessHome.
  *  Called on boot, and again to recover in place if a folder-change copy fails
  *  (config:changeHome tears these down before copying). No-op without a home. */

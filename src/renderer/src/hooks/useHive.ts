@@ -493,15 +493,12 @@ export function useHive(config: HarnessConfig | null): void {
   //    moment the agent goes idle. This is what lets the user keep sending
   //    messages while the agent's "cloud terminal" is mid-run: the messages
   //    park in the store and get typed in (and submitted) as soon as it's free.
-  //    SKIPPED when bareTerminals is enabled (no PTY message injection).
+  //    In bareTerminals mode: routes through telegram_user_send.py instead of PTY.
   useEffect(() => {
     if (!config?.onboardingComplete) return;
-    if (config.bareTerminals) return; // skip — bare terminals don't use PTY message injection
     const FLUSH_COOLDOWN_MS = 4500;
 
-    // Send the front of `srcId`'s queue into `target`'s pty (verbatim or wrapped),
-    // gated on the target being idle + off cooldown. Keyed cooldown per target so
-    // strict one-by-one delivery holds. Returns true if it dispatched.
+    // Send the front of `srcId`'s queue — via PTY (Claude Code) or Telegram (bare terminals).
     const dispatch = (srcId: string, target: Agent | undefined, wrap?: (t: string) => string): boolean => {
       const { messageQueues, removeQueuedMessage } = useStore.getState();
       const next = messageQueues[srcId]?.[0];
@@ -519,7 +516,14 @@ export function useHive(config: HarnessConfig | null): void {
       if (next.text.trim().toLowerCase() === '/clear') {
         useStore.getState().updateAgent(target.id, { contextTokens: 0, contextLimit: undefined, progress: 0 });
       }
-      submitToPty(target.ptyId, wrap ? wrap(next.text) : next.text).catch(() => { /* pty may have died */ });
+
+      if (config.bareTerminals) {
+        // Bare terminals: route through Telegram instead of PTY.
+        const msg = wrap ? wrap(next.text) : next.text;
+        window.cth.telegramQueueSend(msg).catch(() => { /* Telegram bridge may not be running */ });
+      } else {
+        submitToPty(target.ptyId, wrap ? wrap(next.text) : next.text).catch(() => { /* pty may have died */ });
+      }
       return true;
     };
 
