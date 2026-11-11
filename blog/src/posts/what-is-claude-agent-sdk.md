@@ -23,7 +23,7 @@ faq:
 
 The Claude Agent SDK is Claude Code packaged as a Python and TypeScript library, so your own program can run the same agent loop and tools. Our view: pick it when you are building a product, not when you want a coding assistant today. Billing depends on how you sign in. Checked 8 Oct 2026.
 
-[Munder Difflin](https://harnessmd.com/download) is free and open source: a desktop app that runs a team of coding agents such as Claude Code, Codex and Gemini CLI on your own computer. We did not run the SDK for this page. Everything below comes from Anthropic's docs and package pages. The [install guide](/blog/how-to-install-and-use-munder-difflin/) covers setup and the [Concepts hub](/blog/topics/concepts/) explains the terms.
+[Munder Difflin](https://harnessmd.com/download) is free and open source: a desktop app that runs a team of coding agents such as Claude Code, Codex and Gemini CLI on your own computer. Everything below comes from Anthropic's docs and package pages. The [install guide](/blog/how-to-install-and-use-munder-difflin/) covers setup and the [Concepts hub](/blog/topics/concepts/) explains the terms.
 
 ## What is the Claude Agent SDK?
 
@@ -120,7 +120,7 @@ Our view: use the SDK when the agent is a part inside software you ship or sched
 
 1. The Claude Code CLI, for interactive work in a terminal.
 2. Munder Difflin, if you want several CLI agents side by side. See [what a multi-agent harness is](/blog/what-is-a-multi-agent-harness/).
-3. Managed Agents, which the overview lists for when you want Anthropic to host the agent.
+3. Managed Agents, which the overview lists for when you want Anthropic to host the agent. See [dynamic workflows in Managed Agents](/blog/claude-managed-agents-dynamic-workflows/).
 
 A library gives you every knob. It also gives you every knob.
 

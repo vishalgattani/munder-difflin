@@ -6,7 +6,7 @@ category: comparisons
 categoryLabel: Comparisons
 type: Technical
 pinned: true
-pinOrder: 7
+pinOrder: 8
 primaryKeyword: "omniagent alternatives"
 secondaryKeywords: ["omnigent alternatives", "omnigent databricks", "omnigent meta harness", "omniagent harness", "omnigent vs opencode"]
 tags: ["Comparisons", "Multi-Agent", "Claude Code", "Tools", "Open Source"]
@@ -22,6 +22,8 @@ faq:
 ---
 
 The OmniAgent harness people search for is Omnigent, an Apache 2.0 meta harness from Databricks. Good alternatives: Claude Code agent teams for a lighter setup, Munder Difflin or Orca for a local desktop app, Paperclip for company style governance, and LangGraph or the OpenAI Agents SDK if you'd rather write the orchestration yourself.
+
+If Paperclip is the tool you are weighing, our [Paperclip alternatives](/blog/paperclip-alternatives/) page compares six tools like it.
 
 The name is crowded. On GitHub, plexusone/omniagent is a personal assistant that replies for you across chat apps, and sbyoun/OmniAgent is a terminal for running CLI agents across servers. CallMiner also sells an unrelated customer service OmniAgent. If "harness" is a new word here, start with [what a multi-agent harness is](/blog/what-is-a-multi-agent-harness/). Everything below was checked on 14 Sep 2026.
 

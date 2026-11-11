@@ -117,11 +117,11 @@
       <span class="dot" aria-hidden="true"></span>
       <span>5 min</span>
     </div>
-    <h3><a href="/blog/what-is-chatgpt-dots/">What Is ChatGPT Dots? OpenAI&#39;s Always On Agents Explained</a></h3>
-    <p class="dek">A ChatGPT dot is an always on agent with its own cloud computer. Needs Pro (from $100 a month) or Business Premium, not Plus. Not on Pro in the UK or EU.</p>
+    <h3><a href="/blog/what-is-chatgpt-dots/">What Is ChatGPT Dots? Who Gets a Dot, What It Costs, What It Does</a></h3>
+    <p class="dek">A ChatGPT dot is an always on agent with its own cloud computer. You get one on Pro (from $100 a month, Nov 2026) or Business Premium. Plus has none.</p>
     <div class="foot">
       <span class="tag kind">Concepts</span>
-      <a class="more" href="/blog/what-is-chatgpt-dots/" aria-label="Read: What Is ChatGPT Dots? OpenAI&#39;s Always On Agents Explained">Read →</a>
+      <a class="more" href="/blog/what-is-chatgpt-dots/" aria-label="Read: What Is ChatGPT Dots? Who Gets a Dot, What It Costs, What It Does">Read →</a>
     </div>
   </div>
 </article>
@@ -134,7 +134,7 @@
       <span>5 min</span>
     </div>
     <h3><a href="/blog/why-does-claude-code-keep-asking-for-permission/">Why Does Claude Code Keep Asking for Permission?</a></h3>
-    <p class="dek">Claude Code asks because Manual mode gates edits, shell commands and web requests. The fixes, safest first: modes, allow rules, sandboxing, then bypass.</p>
+    <p class="dek">Claude Code keeps asking because Manual mode gates edits, shell commands and web requests. The fixes, safest first: modes, allow rules, sandboxing, then bypass.</p>
     <div class="foot">
       <span class="tag kind">Guides</span>
       <a class="more" href="/blog/why-does-claude-code-keep-asking-for-permission/" aria-label="Read: Why Does Claude Code Keep Asking for Permission?">Read →</a>
@@ -147,13 +147,13 @@
     <div class="meta">
       <time datetime="2026-09-11">Sep 11, 2026</time>
       <span class="dot" aria-hidden="true"></span>
-      <span>8 min</span>
+      <span>5 min</span>
     </div>
-    <h3><a href="/blog/how-to-use-claude-code-plan-mode/">Claude Code Planning Mode: How to Use Claude Plan Mode</a></h3>
-    <p class="dek">Claude Code plan mode, checked 29 Sep 2026: the Shift+Tab shortcut, --permission-mode plan, defaultMode, what it blocks, the approval options and opusplan.</p>
+    <h3><a href="/blog/how-to-use-claude-code-plan-mode/">Claude Code Plan Mode: Shortcut, Exit and Default (Oct 2026)</a></h3>
+    <p class="dek">Press Shift+Tab until the status bar says plan mode on. How to enter, exit and default to Claude Code plan mode, what it blocks, checked 27 Oct 2026.</p>
     <div class="foot">
       <span class="tag kind">Guides</span>
-      <a class="more" href="/blog/how-to-use-claude-code-plan-mode/" aria-label="Read: Claude Code Planning Mode: How to Use Claude Plan Mode">Read →</a>
+      <a class="more" href="/blog/how-to-use-claude-code-plan-mode/" aria-label="Read: Claude Code Plan Mode: Shortcut, Exit and Default (Oct 2026)">Read →</a>
     </div>
   </div>
 </article>
@@ -313,9 +313,10 @@
       if (!btn) return;
       var box = btn.closest('.yt');
       var id = box && box.getAttribute('data-yt');
-      if (!id) return;
+      // Only an 11 character YouTube video id may reach the iframe URL.
+      if (!id || !/^[A-Za-z0-9_-]{11}$/.test(id)) return;
       var frame = document.createElement('iframe');
-      frame.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1';
+      frame.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1';
       frame.title = box.getAttribute('data-title') || 'YouTube video';
       frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
       frame.setAttribute('allowfullscreen', '');

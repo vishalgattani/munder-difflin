@@ -24,7 +24,7 @@ faq:
 
 Our view: pick Claude Code if you want a flat monthly plan, and Gemini CLI if you want an Apache 2.0 tool on a paid Gemini API key. Google said Gemini CLI would stop serving free, Google AI Pro and Ultra users on 18 Jun 2026. Checked 7 Oct 2026.
 
-This sits in our [Comparisons hub](/blog/topics/comparisons/). For setup, read [how to install Gemini CLI](/blog/how-to-install-gemini-cli/). For OpenAI's tool, read [Codex vs Claude Code](/blog/codex-cli-vs-claude-code/).
+This sits in our [Comparisons hub](/blog/topics/comparisons/). For setup, read [how to install Gemini CLI](/blog/how-to-install-gemini-cli/). For OpenAI's tool, read [Codex vs Claude Code](/blog/codex-cli-vs-claude-code/) and [Codex vs Gemini CLI](/blog/codex-vs-gemini-cli/).
 
 ## What are Gemini CLI and Claude Code?
 
@@ -85,7 +85,7 @@ The differences we could source:
 - **Where it runs.** Claude Code's docs list the terminal, IDE extensions, a desktop app and the web. Gemini CLI's README describes a terminal tool and a GitHub Action.
 - **Built in extras.** Gemini CLI's README lists Google Search grounding, conversation checkpointing and sandboxing. Claude Code's overview lists skills, auto memory and scheduled tasks.
 
-We have not run a benchmark between them, so we are not ranking quality or speed.
+This page compares features and setup; it does not rank quality or speed.
 
 ## Who should pick which?
 

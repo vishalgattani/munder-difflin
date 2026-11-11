@@ -651,28 +651,15 @@
     "youtube": []
   },
   "cline-vs-munder-difflin": {
-    "title": "Cline vs Munder Difflin: In-Editor Agent or Local Hive?",
+    "title": "Cline vs Munder Difflin: One Agent Everywhere, or a Team of Agents?",
     "category": "comparisons",
     "hero": {
       "file": "assets/media/cline-vs-munder-difflin/hero.png",
-      "alt": "Illustration: Cline vs Munder Difflin: In-Editor Agent or Local Hive?",
-      "prompt": "Hero image for a blog post titled \"Cline vs Munder Difflin: In-Editor Agent or Local Hive?\". The post is about: A fair comparison of Cline and Munder Difflin — an in-editor BYOK coding agent vs a local multi-agent orchestration hive — and when to pick which.",
+      "alt": "Cline vs Munder Difflin on white: a yellow Cline block wired to four tiles labelled VS Code, Terminal, Desktop and SDK, captioned one agent, many places, beside a lilac Munder Difflin block wired to three tiles labelled Claude Code, Codex and Gemini CLI, captioned many agents, one job.",
+      "prompt": "Still of the hero scene in assets/media/cline-vs-munder-difflin/motion.js.",
       "status": "ready"
     },
-    "inline": {
-      "note-1": {
-        "file": "assets/media/cline-vs-munder-difflin/note-1.png",
-        "alt": "Hand-drawn sketch from “Cline vs Munder Difflin: In-Editor Agent or Local Hive?”",
-        "prompt": "",
-        "status": "ready"
-      },
-      "note-2": {
-        "file": "assets/media/cline-vs-munder-difflin/note-2.png",
-        "alt": "Hand-drawn sketch from “Cline vs Munder Difflin: In-Editor Agent or Local Hive?”",
-        "prompt": "",
-        "status": "ready"
-      }
-    },
+    "inline": {},
     "youtube": []
   },
   "codex-cli-vs-claude-code": {
@@ -1501,11 +1488,11 @@
     "youtube": []
   },
   "how-to-install-and-use-munder-difflin": {
-    "title": "How to Install and Use Munder Difflin: A Beginner's Guide",
+    "title": "How to Install Munder Difflin 0.5.6: A Beginner's Guide From Zero to a Working Office",
     "category": "guides",
     "hero": {
       "file": "assets/media/how-to-install-and-use-munder-difflin/hero.png",
-      "alt": "The first Munder Difflin onboarding screen, asking whether you are technical or non-technical",
+      "alt": "Title card on white. Large ink type reads Install Munder Difflin 0.5.6 under the line From zero to a working office, with a Beginner's guide pill, beside a shelf going up on two brackets with a spirit level on it, a screwdriver, a hex key and two spare screws.",
       "prompt": "",
       "status": "ready"
     },
@@ -1603,6 +1590,18 @@
       "shot-focus": {
         "file": "assets/media/how-to-install-and-use-munder-difflin/shot-focus.png",
         "alt": "Munder Difflin in focus mode, showing a single agent's terminal at full width with the agent list on the left",
+        "prompt": "",
+        "status": "ready"
+      },
+      "autonomy-056": {
+        "file": "assets/media/how-to-install-and-use-munder-difflin/autonomy-056.png",
+        "alt": "Screenshot of Munder Difflin Settings, Autonomy & Budgets, in light mode: Autonomous set to autonomous, Who can add agents set to me and the orchestrator, the circuit breaker switched on with fields for a floor token budget and token velocity, and archiving settings.",
+        "prompt": "",
+        "status": "ready"
+      },
+      "prerequisites-056": {
+        "file": "assets/media/how-to-install-and-use-munder-difflin/prerequisites-056.png",
+        "alt": "Screenshot of Munder Difflin Settings, Prerequisites, in light mode: uv, git and Node.js marked Found with their paths, and MemPalace marked Not found with its install command and a copy button.",
         "prompt": "",
         "status": "ready"
       }
@@ -3071,6 +3070,466 @@
     },
     "youtube": []
   },
+  "claude-cowork-alternatives": {
+    "title": "Claude Cowork Alternatives: 6 AI Agents for Office Work, Free Picks Included",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/claude-cowork-alternatives/hero.png",
+      "alt": "Title card on white. A pill reading Comparisons, the title Claude Cowork alternatives, the line Six agents for office work and a Checked 27 Oct 2026 line. Beside them a white card labelled Claude Cowork with a small arrow to a fan of six small cards, the first two tinted yellow and lilac.",
+      "prompt": "Title card: the hero scene in assets/media/claude-cowork-alternatives/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "agent-tools-today-2026-10-27": {
+    "title": "Agent Tools Today, 27 Oct 2026: GPT-6.1 Terra, Hob, Anthropic's S-1",
+    "category": "news",
+    "hero": {
+      "file": "assets/media/agent-tools-today/hero.png",
+      "alt": "Hand drawn sketch: a front page with five numbered lines, a clock, and a yellow character reading it out",
+      "prompt": "Series hero for the Agent Tools Today daily brief, drawn in code (media-src/topic-tiles.html?t=news). Reused by every brief.",
+      "status": "ready"
+    },
+    "inline": {},
+    "youtube": []
+  },
+  "pi-vs-claude-code": {
+    "title": "Pi vs Claude Code: Price, Models and Permissions Compared (Oct 2026)",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/pi-vs-claude-code/hero.png",
+      "alt": "Title card on white. A pill reading Comparisons, the title Pi vs Claude Code, the line Free harness or built in features? and a Checked 27 Oct 2026 line. Beside them two simple cards labelled Pi, tinted lilac, and Claude Code, tinted yellow, with a small vs chip between them.",
+      "prompt": "Title card: the hero scene in assets/media/pi-vs-claude-code/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "agent-tools-today-2026-10-28": {
+    "title": "Agent Tools Today, 28 Oct 2026: OpenCode 2.2, Entire, Hallmark",
+    "category": "news",
+    "hero": {
+      "file": "assets/media/agent-tools-today/hero.png",
+      "alt": "Hand drawn sketch: a front page with five numbered lines, a clock, and a yellow character reading it out",
+      "prompt": "Series hero for the Agent Tools Today daily brief, drawn in code (media-src/topic-tiles.html?t=news). Reused by every brief.",
+      "status": "ready"
+    },
+    "inline": {},
+    "youtube": []
+  },
+  "chatgpt-dots-vs-claude-cowork": {
+    "title": "ChatGPT Dots vs Claude Cowork: Plans, Price and Safety (Oct 2026)",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/chatgpt-dots-vs-claude-cowork/hero.png",
+      "alt": "Title card on white. A pill reading Comparisons, the title ChatGPT Dots vs Claude Cowork, the line Ongoing jobs or finished files? and a Checked 28 Oct 2026 line, beside a lilac ribbon bookmark and a yellow index card with a small vs chip between them.",
+      "prompt": "Title card: the hero scene in assets/media/chatgpt-dots-vs-claude-cowork/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "codex-vs-chatgpt": {
+    "title": "Codex vs ChatGPT: What Is the Difference? (Oct 2026)",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/codex-vs-chatgpt/hero.png",
+      "alt": "Title card on white. A pill reading Comparisons, the title Codex vs ChatGPT, the line Coding agent or assistant? and a Checked 28 Oct 2026 line, beside two stacked trays labelled ChatGPT and Codex with a small vs chip.",
+      "prompt": "Title card: the hero scene in assets/media/codex-vs-chatgpt/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "agent-tools-today-2026-10-29": {
+    "title": "Agent Tools Today, 29 Oct 2026: Gemini 4 Carbon, Copilot Connectors, OpenCode Goals",
+    "category": "news",
+    "hero": {
+      "file": "assets/media/agent-tools-today/hero.png",
+      "alt": "Hand drawn sketch: a front page with five numbered lines, a clock, and a yellow character reading it out",
+      "prompt": "Series hero for the Agent Tools Today daily brief, drawn in code (media-src/topic-tiles.html?t=news). Reused by every brief.",
+      "status": "ready"
+    },
+    "inline": {},
+    "youtube": []
+  },
+  "gemini-4-carbon": {
+    "title": "Gemini 4 Carbon: Price, Access and How It Compares to Argon (Oct 2026)",
+    "category": "concepts",
+    "hero": {
+      "file": "assets/media/gemini-4-carbon/hero.png",
+      "alt": "Title card on white. Gemini 4 Carbon in large ink type, a Concepts pill, the line Early access, Argon's price, Checked 29 Oct 2026, and two blocks labelled Argon and Carbon on a two step podium",
+      "prompt": "Still of the hero scene in assets/media/gemini-4-carbon/motion.js.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "how-to-run-mistral-large-4": {
+    "title": "How to Run Mistral Large 4 Locally: Hardware, GGUF Sizes and vLLM (Oct 2026)",
+    "category": "guides",
+    "hero": {
+      "file": "assets/media/how-to-run-mistral-large-4/hero.png",
+      "alt": "Title card on white. Run Mistral Large 4 in large ink type with the line From 256 GB of memory, three suitcases tagged 233 GB, 378 GB and 605 GB, and Checked 29 Oct 2026",
+      "prompt": "Still of the hero scene in assets/media/how-to-run-mistral-large-4/motion.js.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "mistral-large-4-vs-claude-opus-5-5": {
+    "title": "Mistral Large 4 vs Claude Opus 5.5: Price, Coding Scores and Open Weights (Oct 2026)",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/mistral-large-4-vs-claude-opus-5-5/hero.png",
+      "alt": "Title card on white. Mistral Large 4 vs Claude Opus 5.5 in large ink type with the line Open weights or top scores, two taxi meters reading $2.10 and $20, and Checked 29 Oct 2026",
+      "prompt": "Still of the hero scene in assets/media/mistral-large-4-vs-claude-opus-5-5/motion.js.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "what-is-kimi-k3-1-pro": {
+    "title": "What Is Kimi K3.1 Pro? Price, Weights and How to Use It for Coding (Oct 2026)",
+    "category": "concepts",
+    "hero": {
+      "file": "assets/media/what-is-kimi-k3-1-pro/hero.png",
+      "alt": "Title card on white. Kimi K3.1 Pro in large ink type with the line 1M context, weights by 4 Nov, three high jump bars, and Checked 29 Oct 2026",
+      "prompt": "Still of the hero scene in assets/media/what-is-kimi-k3-1-pro/motion.js.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "agent-tools-today-2026-10-30": {
+    "title": "Agent Tools Today, 30 Oct 2026: Mistral Large 4 Weights, Claude Code 2.1.314, Herdr App",
+    "category": "news",
+    "hero": {
+      "file": "assets/media/agent-tools-today/hero.png",
+      "alt": "Hand drawn sketch: a front page with five numbered lines, a clock, and a yellow character reading it out",
+      "prompt": "Series hero for the Agent Tools Today daily brief, drawn in code (media-src/topic-tiles.html?t=news). Reused by every brief.",
+      "status": "ready"
+    },
+    "inline": {},
+    "youtube": []
+  },
+  "what-is-instinct-ai": {
+    "title": "What Is Instinct AI? Access, Privacy and 6 Alternatives You Can Use Now (Oct 2026)",
+    "category": "concepts",
+    "hero": {
+      "file": "assets/media/what-is-instinct-ai/hero.png",
+      "alt": "Title card on white. What is Instinct AI? in large ink type, a Concepts pill, the line Private beta, plus 6 alternatives, Checked 30 Oct 2026, and three small chat bubbles",
+      "prompt": "Still of the hero scene in assets/media/what-is-instinct-ai/motion.js.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "meta-muse-alternatives": {
+    "title": "Meta Muse Alternatives: 7 Picks If Muse Isn't in Your Country or You Want Your Data Back (Oct 2026)",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/meta-muse-alternatives/hero.png",
+      "alt": "Title card on white. Meta Muse alternatives in large ink type, a Comparisons pill, the line 7 picks, open source and hosted, Checked 30 Oct 2026, and a small compass",
+      "prompt": "Still of the hero scene in assets/media/meta-muse-alternatives/motion.js.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "agent-tools-today-2026-10-31": {
+    "title": "Agent Tools Today, 31 Oct 2026: Claude Code Extension Backdoor in Cursor, Claude Code 2.1.316, OpenCode 2.2.5",
+    "category": "news",
+    "hero": {
+      "file": "assets/media/agent-tools-today/hero.png",
+      "alt": "Hand drawn sketch: a front page with five numbered lines, a clock, and a yellow character reading it out",
+      "prompt": "Series hero for the Agent Tools Today daily brief, drawn in code (media-src/topic-tiles.html?t=news). Reused by every brief.",
+      "status": "ready"
+    },
+    "inline": {},
+    "youtube": []
+  },
+  "agent-tools-today-2026-11-01": {
+    "title": "Agent Tools Today, 1 Nov 2026: ChatGPT Share Link Takeover, Prospero, Orkas",
+    "category": "news",
+    "hero": {
+      "file": "assets/media/agent-tools-today/hero.png",
+      "alt": "Hand drawn sketch: a front page with five numbered lines, a clock, and a yellow character reading it out",
+      "prompt": "Series hero for the Agent Tools Today daily brief, drawn in code (media-src/topic-tiles.html?t=news). Reused by every brief.",
+      "status": "ready"
+    },
+    "inline": {},
+    "youtube": []
+  },
+  "agent-tools-today-2026-11-02": {
+    "title": "Agent Tools Today, 2 Nov 2026: ChatGPT and Codex Shared Limits, Memdoor, T3 Code",
+    "category": "news",
+    "hero": {
+      "file": "assets/media/agent-tools-today/hero.png",
+      "alt": "Hand drawn sketch: a front page with five numbered lines, a clock, and a yellow character reading it out",
+      "prompt": "Series hero for the Agent Tools Today daily brief, drawn in code (media-src/topic-tiles.html?t=news). Reused by every brief.",
+      "status": "ready"
+    },
+    "inline": {},
+    "youtube": []
+  },
+  "deepseek-harness-alternatives": {
+    "title": "DeepSeek Harness Alternatives: 6 Picks by Why You Are Leaving (Nov 2026)",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/deepseek-harness-alternatives/hero.png",
+      "alt": "Title card on white. A pill reading Alternatives, the title DeepSeek Harness alternatives, the line 6 picks by why you are leaving and a Checked 2 Nov 2026 line. Six small tiles named Claude Code, Munder Difflin, Codex CLI, OpenCode, Qwen Code and Pi slide in under a grey tile labelled DeepSeek Harness.",
+      "prompt": "Title card: the hero scene in assets/media/deepseek-harness-alternatives/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "agent-tools-today-2026-11-03": {
+    "title": "Agent Tools Today, 3 Nov 2026: Astra Edits Weights, Claude Code 2.1.317, Momentic Mo",
+    "category": "news",
+    "hero": {
+      "file": "assets/media/agent-tools-today/hero.png",
+      "alt": "Hand drawn sketch: a front page with five numbered lines, a clock, and a yellow character reading it out",
+      "prompt": "Series hero for the Agent Tools Today daily brief, drawn in code (media-src/topic-tiles.html?t=news). Reused by every brief.",
+      "status": "ready"
+    },
+    "inline": {},
+    "youtube": []
+  },
+  "t3-code-alternatives": {
+    "title": "T3 Code Alternatives: 6 Picks by Why You Are Leaving (Nov 2026)",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/t3-code-alternatives/hero.png",
+      "alt": "Title card on white. A pill reading Alternatives, the title T3 Code alternatives, the line 6 picks by why you are leaving and a Checked 3 Nov 2026 line. Six small tiles named Claude Code desktop, Munder Difflin, Codex app, Orca, Conductor and OpenCode desktop slide in under a grey tile labelled T3 Code.",
+      "prompt": "Title card: the hero scene in assets/media/t3-code-alternatives/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "agent-tools-today-2026-11-04": {
+    "title": "Agent Tools Today, 4 Nov 2026: Postman Plugins, Astra Critique, Claude Code 2.1.318",
+    "category": "news",
+    "hero": {
+      "file": "assets/media/agent-tools-today/hero.png",
+      "alt": "Hand drawn sketch: a front page with five numbered lines, a clock, and a yellow character reading it out",
+      "prompt": "Series hero for the Agent Tools Today daily brief, drawn in code (media-src/topic-tiles.html?t=news). Reused by every brief.",
+      "status": "ready"
+    },
+    "inline": {},
+    "youtube": []
+  },
+  "agent-desktop-alternatives": {
+    "title": "agent-desktop Alternatives: 6 Picks by Why You Are Leaving (Nov 2026)",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/agent-desktop-alternatives/hero.png",
+      "alt": "Title card on white. A pill reading Alternatives, the title agent-desktop alternatives, the line 6 picks by why you are leaving and a Checked 4 Nov 2026 line. Six small tiles named Claude Code computer use, Munder Difflin, Codex computer use, Playwright MCP, Browser Use and Cua slide in under a grey tile labelled agent-desktop.",
+      "prompt": "Title card: the hero scene in assets/media/agent-desktop-alternatives/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "worktrunk-alternatives": {
+    "title": "Worktrunk Alternatives: 6 Picks for Parallel AI Agents (Nov 2026)",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/worktrunk-alternatives/hero.png",
+      "alt": "Title card on white. A pill reading Alternatives, the title Worktrunk alternatives, the line 6 picks by why you are leaving and a Checked 4 Nov 2026 line. Six small tiles named Plain git, Munder Difflin, Claude Squad, Orca, Emdash and Conductor slide in under a grey tile labelled Worktrunk.",
+      "prompt": "Title card: the hero scene in assets/media/worktrunk-alternatives/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "antigravity-alternatives": {
+    "title": "Antigravity Alternatives: 6 Picks by Why You Are Leaving (Nov 2026)",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/antigravity-alternatives/hero.png",
+      "alt": "Title card on white. A pill reading Alternatives, the title Antigravity alternatives, the line 6 picks by why you are leaving and a Checked 4 Nov 2026 line. Six small tiles named Claude Code, Munder Difflin, Codex, Cursor, Cline and Zed slide in under a grey tile labelled Antigravity.",
+      "prompt": "Title card: the hero scene in assets/media/antigravity-alternatives/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "agent-tools-today-2026-11-05": {
+    "title": "Agent Tools Today, 5 Nov 2026: Conductor Joins Meta, OpenAI to Buy Pierre, Gemini Training",
+    "category": "news",
+    "hero": {
+      "file": "assets/media/agent-tools-today/hero.png",
+      "alt": "Hand drawn sketch: a front page with five numbered lines, a clock, and a yellow character reading it out",
+      "prompt": "Series hero for the Agent Tools Today daily brief, drawn in code (media-src/topic-tiles.html?t=news). Reused by every brief.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "roo-code-alternatives": {
+    "title": "Roo Code Alternatives: 6 Picks Now That Roo Code Is Shut Down (Nov 2026)",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/roo-code-alternatives/hero.png",
+      "alt": "Title card on white. A pill reading Alternatives, the title Roo Code alternatives, the line 6 picks now that Roo Code is shut down and a Checked 4 Nov 2026 line. Six small tiles named ZooCode, Munder Difflin, Cline, Kilo Code, Roomote and Claude Code slide in under a grey tile labelled Roo Code.",
+      "prompt": "Title card: the hero scene in assets/media/roo-code-alternatives/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "gemini-cli-alternatives": {
+    "title": "Gemini CLI Alternatives: 6 Picks Now the Free Tier Has Moved (Nov 2026)",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/gemini-cli-alternatives/hero.png",
+      "alt": "Title card on white. A pill reading Alternatives, the title Gemini CLI alternatives, the line 6 picks now the free tier has moved and a Checked 4 Nov 2026 line. Six small tiles named Antigravity CLI, Munder Difflin, Claude Code, Codex CLI, OpenCode and Qwen Code slide in under a grey tile labelled Gemini CLI.",
+      "prompt": "Title card: the hero scene in assets/media/gemini-cli-alternatives/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "agent-tools-today-2026-11-06": {
+    "title": "Agent Tools Today, 6 Nov 2026: Claude Code Email Report, GPT-6 Astra on Safety Work, Crush Subagents",
+    "category": "news",
+    "hero": {
+      "file": "assets/media/agent-tools-today/hero.png",
+      "alt": "Hand drawn sketch: a front page with five numbered lines, a clock, and a yellow character reading it out",
+      "prompt": "Series hero for the Agent Tools Today daily brief, drawn in code (media-src/topic-tiles.html?t=news). Reused by every brief.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "conductor-alternatives": {
+    "title": "Conductor Alternatives: 6 Picks Now That Conductor Is Joining Meta (Nov 2026)",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/conductor-alternatives/hero.png",
+      "alt": "Title card on white. A pill reading Alternatives, the title Conductor alternatives, the line 6 picks now that Conductor is joining Meta and a Checked 6 Nov 2026 line. Six small tiles named Orca, Munder Difflin, Emdash, T3 Code, Worktrunk and Claude Code slide in under a grey tile labelled Conductor.",
+      "prompt": "Title card: the hero scene in assets/media/conductor-alternatives/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "windsurf-alternatives": {
+    "title": "Windsurf Alternatives: 6 Picks Now That Windsurf Is Devin Desktop (Nov 2026)",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/windsurf-alternatives/hero.png",
+      "alt": "Title card on white. A pill reading Alternatives, the title Windsurf alternatives, the line 6 picks now that Windsurf is Devin Desktop and a Checked 6 Nov 2026 line. Six small tiles named Cursor, Munder Difflin, Zed, GitHub Copilot, Cline and Claude Code slide in under a grey tile labelled Windsurf.",
+      "prompt": "Title card: the hero scene in assets/media/windsurf-alternatives/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "orchestrator-inc-vs-munder-difflin": {
+    "title": "Orchestrator.inc vs Munder Difflin: An Honest Comparison (Nov 2026)",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/orchestrator-inc-vs-munder-difflin/hero.png",
+      "alt": "Title card on white. A pill reading Versus, the title Orchestrator.inc vs Munder Difflin, the line An honest comparison and a Checked 6 Nov 2026 line. Two tiles slide in side by side, one labelled Orchestrator.inc and one labelled Munder Difflin.",
+      "prompt": "Title card: the hero scene in assets/media/orchestrator-inc-vs-munder-difflin/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "emdash-alternatives": {
+    "title": "Emdash Alternatives: 6 Tools for Parallel Coding Agents (Nov 2026)",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/emdash-alternatives/hero.png",
+      "alt": "Title card on white. A pill reading Alternatives, the title Emdash alternatives, the line 6 tools for parallel coding agents and a Checked 6 Nov 2026 line. Six small tiles named Orca, Munder Difflin, Orchestrator.inc, T3 Code, Worktrunk and Claude Code slide in under a grey tile labelled Emdash.",
+      "prompt": "Title card: the hero scene in assets/media/emdash-alternatives/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "agent-tools-today-2026-11-07": {
+    "title": "Agent Tools Today, 7 Nov 2026: Claude Code MCP Tasks, OpenCode Shared MCP, Cloudflare Audit Skill",
+    "category": "news",
+    "hero": {
+      "file": "assets/media/agent-tools-today/hero.png",
+      "alt": "Hand drawn sketch: a front page with five numbered lines, a clock, and a yellow character reading it out",
+      "prompt": "Series hero for the Agent Tools Today daily brief, drawn in code (media-src/topic-tiles.html?t=news). Reused by every brief.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "agent-tools-today-2026-11-08": {
+    "title": "Agent Tools Today, 8 Nov 2026: Orca Chat Forks, Qwen Code 0.27.0, Anthropic on Agent Memory",
+    "category": "news",
+    "hero": {
+      "file": "assets/media/agent-tools-today/hero.png",
+      "alt": "Hand drawn sketch: a front page with five numbered lines, a clock, and a yellow character reading it out",
+      "prompt": "Series hero for the Agent Tools Today daily brief, drawn in code (media-src/topic-tiles.html?t=news). Reused by every brief.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "paradev-alternatives": {
+    "title": "Paradev Alternatives: 6 Tools for Running Coding Agents in Parallel (Nov 2026)",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/paradev-alternatives/hero.png",
+      "alt": "Title card on white. A pill reading Alternatives, the title Paradev alternatives, the line 6 tools for running coding agents in parallel and a Checked 7 Nov 2026 line. Six small tiles named Orca, Munder Difflin, Orchestrator.inc, Emdash Classic, T3 Code and Claude Code slide in under a grey tile labelled Paradev.",
+      "prompt": "Title card: the hero scene in assets/media/paradev-alternatives/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "perplexity-teammates-vs-munder-difflin": {
+    "title": "Perplexity Teammates vs Munder Difflin: Hosted Agents or Your Own Computer (Nov 2026)",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/perplexity-teammates-vs-munder-difflin/hero.png",
+      "alt": "Title card on white. A pill reading Compared, the title Perplexity Teammates vs Munder Difflin, the line Hosted agents or your own computer and a Checked 7 Nov 2026 line. Two tiles named Perplexity Teammates and Munder Difflin slide in side by side.",
+      "prompt": "Title card: the hero scene in assets/media/perplexity-teammates-vs-munder-difflin/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "agent-tools-today-2026-11-09": {
+    "title": "Agent Tools Today, 9 Nov 2026: Orca Git Graph, Goodbye Claude for Pi, Goldman Pulls Claude Code",
+    "category": "news",
+    "hero": {
+      "file": "assets/media/agent-tools-today/hero.png",
+      "alt": "Hand drawn sketch: a front page with five numbered lines, a clock, and a yellow character reading it out",
+      "prompt": "Series hero for the Agent Tools Today daily brief, drawn in code (media-src/topic-tiles.html?t=news). Reused by every brief.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "paperclip-alternatives": {
+    "title": "Paperclip Alternatives: 6 Tools for Running a Team of AI Agents (Nov 2026)",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/paperclip-alternatives/hero.png",
+      "alt": "Title card on white. A pill reading Alternatives, the title Paperclip alternatives, the line 6 tools for running a team of AI agents and a Checked 9 Nov 2026 line. Six small tiles named AionUi, Munder Difflin, LobeHub, Orchestrator.inc, Omnigent and Herdr slide in under a grey tile labelled Paperclip.",
+      "prompt": "Title card: the hero scene in assets/media/paperclip-alternatives/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "claude-code-privacy-and-secrets": {
+    "title": "Claude Code Privacy: Your Email Address, Saved Rules and Secrets",
+    "category": "guides",
+    "hero": {
+      "file": "assets/media/claude-code-privacy-and-secrets/hero.png",
+      "alt": "Title card on white. A pill reading Guide, the title Claude Code privacy, the line Your email address, saved rules and secrets and a Checked 9 Nov 2026 line. Three small cards reading 2.1.317, settings.local.json and Read(./.env) slide in on the right.",
+      "prompt": "Title card: the hero scene in assets/media/claude-code-privacy-and-secrets/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "aionui-alternatives": {
+    "title": "AionUi Alternatives: 5 Apps for Running Teams of AI Agents (Nov 2026)",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/aionui-alternatives/hero.png",
+      "alt": "Title card on white. A pill reading Alternatives, the title AionUi alternatives, the line 5 apps for running teams of AI agents and a Checked 9 Nov 2026 line. Five small tiles named Orca, Munder Difflin, OpenWork, Claude Cowork and Paperclip slide in under a grey tile labelled AionUi.",
+      "prompt": "Title card: the hero scene in assets/media/aionui-alternatives/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "agent-tools-today-2026-11-10": {
+    "title": "Agent Tools Today, 10 Nov 2026: Claude Fable 5.2, an Opus 5.5 Nerf Thread, Orca's Phone Agents Tab",
+    "category": "news",
+    "hero": {
+      "file": "assets/media/agent-tools-today/hero.png",
+      "alt": "Hand drawn sketch: a front page with five numbered lines, a clock, and a yellow character reading it out",
+      "prompt": "Series hero for the Agent Tools Today daily brief, drawn in code (media-src/topic-tiles.html?t=news). Reused by every brief.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
   "the-hook-shim-pattern": {
     "title": "The Hook Shim Pattern: Wiring Agent Hooks to a Live Process",
     "category": "internals",
@@ -3822,11 +4281,11 @@
     "youtube": []
   },
   "your-first-hour-with-munder-difflin": {
-    "title": "Your First Hour With Munder Difflin: Onboarding to a Pro Office",
+    "title": "Your First Hour With Munder Difflin 0.5.6: Onboarding From First Sign In to a Working Office",
     "category": "guides",
     "hero": {
       "file": "assets/media/your-first-hour-with-munder-difflin/hero.png",
-      "alt": "Michael, the orchestrator, in the Pro app after dispatching four tasks to his agents",
+      "alt": "Title card on white. Large ink type reads Your First Hour With Munder Difflin 0.5.6, with the line From first sign in to a working office and a pill reading Onboarding guide, beside a blue stopwatch whose yellow ring has gone once all the way round as it rings.",
       "prompt": "",
       "status": "ready"
     },
@@ -3984,6 +4443,18 @@
       "g3-ring": {
         "file": "assets/media/your-first-hour-with-munder-difflin/g3-ring.png",
         "alt": "The floating Stapler with its action ring open",
+        "prompt": "",
+        "status": "ready"
+      },
+      "pro-sidebar-056": {
+        "file": "assets/media/your-first-hour-with-munder-difflin/pro-sidebar-056.png",
+        "alt": "Screenshot of the Munder Difflin Pro sidebar in light mode: the app name and PRO plan, then rows for Tasks, Inbox, Automations, Memory, Capabilities and Stapler.",
+        "prompt": "",
+        "status": "ready"
+      },
+      "ask-me-056": {
+        "file": "assets/media/your-first-hour-with-munder-difflin/ask-me-056.png",
+        "alt": "Screenshot of an agent's Inbox in Munder Difflin, light mode: an Ask me list with three questions, each with a task key, a time and an Answer button, above the message box with Send and Steer.",
         "prompt": "",
         "status": "ready"
       }
@@ -4260,7 +4731,7 @@
     }
   },
   "what-is-codex": {
-    "title": "What Is Codex? OpenAI's Coding Agent in the CLI, App and Cloud",
+    "title": "What Is Codex? OpenAI's Coding Agent, Its Free Plan and Models",
     "category": "concepts",
     "hero": {
       "file": "assets/media/what-is-codex/hero.png",
@@ -4550,7 +5021,7 @@
     "category": "concepts",
     "hero": {
       "file": "assets/media/mistral-large-4/hero.png",
-      "alt": "Title card on white. Mistral Large 4 in large ink type with a lilac kettlebell labelled Le Chonk and the line Checked 6 Oct 2026",
+      "alt": "Title card on white. Mistral Large 4 in large ink type with a lilac kettlebell labelled Le Chonk and the line Checked 29 Oct 2026",
       "prompt": "Still of the hero scene in assets/media/mistral-large-4/motion.js.",
       "status": "ready"
     },
@@ -4646,6 +5117,18 @@
     "inline": {},
     "youtube": []
   },
+  "agent-tools-today-2026-10-10": {
+    "title": "Agent Tools Today, 10 Oct 2026: MXC SDK 1.0, Claude Code 2.1.296, Microsoft-Decision-1",
+    "category": "news",
+    "hero": {
+      "file": "assets/media/agent-tools-today/hero.png",
+      "alt": "Hand drawn sketch: a front page with five numbered lines, a clock, and a yellow character reading it out",
+      "prompt": "Series hero for the Agent Tools Today daily brief, drawn in code (media-src/topic-tiles.html?t=news). Reused by every brief.",
+      "status": "ready"
+    },
+    "inline": {},
+    "youtube": []
+  },
   "cursor-alternatives": {
     "title": "Cursor Alternatives: 7 AI Coding Tools to Switch To",
     "category": "comparisons",
@@ -4697,6 +5180,630 @@
       "file": "assets/media/what-is-zcode/hero.png",
       "alt": "Title card on white. The word ZCode in large ink type with an Explainer kicker, the line Checked 8 Oct 2026, and a paper kite flying from a spool of string",
       "prompt": "Still of the hero scene in assets/media/what-is-zcode/motion.js.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "codex-vs-claude-code-usage-limits": {
+    "title": "Codex vs Claude Code usage limits",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/codex-vs-claude-code-usage-limits/hero.png",
+      "alt": "Title card on white. The words Codex vs Claude Code usage limits in large ink type with the kicker Comparisons, the line Checked 10 Oct 2026 and a yellow tape measure pulled out with no numbers on it.",
+      "prompt": "Still of the hero scene in assets/media/codex-vs-claude-code-usage-limits/motion.js.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "claude-managed-agents-dynamic-workflows": {
+    "title": "Claude Managed Agents dynamic workflows",
+    "category": "concepts",
+    "hero": {
+      "file": "assets/media/claude-managed-agents-dynamic-workflows/hero.png",
+      "alt": "Title card on white. Dynamic workflows in large ink type, a Claude Managed Agents beta kicker, Checked 11 Oct 2026, and a cotton reel with five coloured threads fanning out.",
+      "prompt": "Still of the hero scene in assets/media/claude-managed-agents-dynamic-workflows/motion.js.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "agent-tools-today-2026-10-11": {
+    "title": "Agent Tools Today, 11 Oct 2026: Dynamic Workflows, TypeSafe AI's Raise, OpenCode 1.19.0",
+    "category": "news",
+    "hero": {
+      "file": "assets/media/agent-tools-today/hero.png",
+      "alt": "Hand drawn sketch: a front page with five numbered lines, a clock, and a yellow character reading it out",
+      "prompt": "Series hero for the Agent Tools Today daily brief, drawn in code (media-src/topic-tiles.html?t=news). Reused by every brief.",
+      "status": "ready"
+    },
+    "inline": {},
+    "youtube": []
+  },
+  "claude-code-projects": {
+    "title": "Claude Code Projects: what they are and who can use them",
+    "category": "concepts",
+    "hero": {
+      "file": "assets/media/claude-code-projects/hero.png",
+      "alt": "Title card on white. The words Claude Code Projects in large ink type with a Concepts kicker, Checked 11 Oct 2026, and three spools of thread with their threads running side by side",
+      "prompt": "Still of the hero scene in assets/media/claude-code-projects/motion.js.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "agent-tools-today-2026-10-12": {
+    "title": "Agent Tools Today, 12 Oct 2026: WordCraft 0.5.0, Genkit Dart 1.0, 500 Billion Tokens",
+    "category": "news",
+    "hero": {
+      "file": "assets/media/agent-tools-today/hero.png",
+      "alt": "Hand drawn sketch: a front page with five numbered lines, a clock, and a yellow character reading it out",
+      "prompt": "Series hero for the Agent Tools Today daily brief, drawn in code (media-src/topic-tiles.html?t=news). Reused by every brief.",
+      "status": "ready"
+    },
+    "inline": {},
+    "youtube": []
+  },
+  "claude-code-routines": {
+    "title": "Claude routines",
+    "category": "concepts",
+    "hero": {
+      "file": "assets/media/claude-code-routines/hero.png",
+      "alt": "Title card on white. Claude routines in large ink type beside a wall calendar with one column of days ticked, checked 12 Oct 2026.",
+      "prompt": "Still of the hero scene in assets/media/claude-code-routines/motion.js.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "agent-tools-today-2026-10-13": {
+    "title": "Agent Tools Today, 13 Oct 2026: Muse Wonder, GLM-Legal, the Codex Daemon Issue",
+    "category": "news",
+    "hero": {
+      "file": "assets/media/agent-tools-today/hero.png",
+      "alt": "Hand drawn sketch: a front page with five numbered lines, a clock, and a yellow character reading it out",
+      "prompt": "Series hero for the Agent Tools Today daily brief, drawn in code (media-src/topic-tiles.html?t=news). Reused by every brief.",
+      "status": "ready"
+    },
+    "inline": {},
+    "youtube": []
+  },
+  "muse-wonder": {
+    "title": "Muse Wonder",
+    "category": "concepts",
+    "hero": {
+      "file": "assets/media/muse-wonder/hero.png",
+      "alt": "Title card on white. Muse Wonder in large ink type over a yellow underline, a kicker reading Meta's new models, prices and scores, a Checked 13 Oct 2026 pill and a pocket compass.",
+      "prompt": "Still of the hero scene in assets/media/muse-wonder/motion.js.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "gemini-4-argon": {
+    "title": "Gemini 4 Argon: Google's Flagship Model Shares a Name With a Gas That Barely Reacts",
+    "category": "concepts",
+    "hero": {
+      "file": "assets/media/gemini-4-argon/hero.png",
+      "alt": "Title card on white. Gemini 4 Argon in large ink type over a yellow underline, with a kicker reading Release date, price, access and scores, a pill reading Checked 13 Oct 2026, and a paper pinwheel on a stick.",
+      "prompt": "Still of the hero scene in assets/media/gemini-4-argon/motion.js.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "gemini-4-argon-vs-claude-opus-5-5": {
+    "title": "Gemini 4 Argon vs Claude Opus 5.5 vs GPT-6 Astra: Google Published a Table It Does Not Fully Win",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/gemini-4-argon-vs-claude-opus-5-5/hero.png",
+      "alt": "Title card on white. Gemini 4 Argon vs Claude Opus 5.5 vs GPT-6 Astra in large ink type, Checked 13 Oct 2026, and a telescope on a tripod pointed at three stars.",
+      "prompt": "Still of the hero scene in assets/media/gemini-4-argon-vs-claude-opus-5-5/motion.js.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "gemini-4-argon-pricing": {
+    "title": "Gemini 4 Argon Pricing: Half Price Until 30 November, Then the Real Bill Arrives",
+    "category": "guides",
+    "hero": {
+      "file": "assets/media/gemini-4-argon-pricing/hero.png",
+      "alt": "Title card on white. The words Gemini 4 Argon Pricing in large ink type above a Checked 13 Oct 2026 pill, beside a wind chime with four coloured tubes.",
+      "prompt": "Still of the hero scene in assets/media/gemini-4-argon-pricing/motion.js.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "how-to-use-gemini-4-argon": {
+    "title": "How to Use Gemini 4 Argon: Five Ways In, and Free Is Not One of Them",
+    "category": "guides",
+    "hero": {
+      "file": "assets/media/how-to-use-gemini-4-argon/hero.png",
+      "alt": "Title card on white. The title How to Use Gemini 4 Argon in large ink type, with the kicker Five ways in, and free is not one of them, a Checked 13 Oct 2026 pill and a striped spinning top.",
+      "prompt": "Still of the hero scene in assets/media/how-to-use-gemini-4-argon/motion.js.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "gemini-4-argon-inside-google": {
+    "title": "Google Let Gemini 4 Argon Loose on Its Own Coding Backlog. Here Are the Receipts.",
+    "category": "concepts",
+    "hero": {
+      "file": "assets/media/gemini-4-argon-inside-google/hero.png",
+      "alt": "Title card on white. Gemini 4 Argon Inside Google in large ink type with a kicker, a line reading Checked 13 Oct 2026 and a folded paper boat riding three wavy lines of water.",
+      "prompt": "Still of the hero scene in assets/media/gemini-4-argon-inside-google/motion.js.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "ai-agent-use-cases-our-office": {
+    "title": "AI Agent Use Cases From a Real Company: Every Agent on Our Floor and the Job It Does",
+    "category": "guides",
+    "hero": {
+      "file": "assets/media/ai-agent-use-cases-our-office/hero.png",
+      "alt": "Title card on white. Every Agent on Our Floor in large ink type, a Checked 14 Oct 2026 pill and a yellow desk bell ringing.",
+      "prompt": "Still of the hero scene in assets/media/ai-agent-use-cases-our-office/motion.js.",
+      "status": "ready"
+    },
+    "inline": {
+      "busy-office": {
+        "file": "assets/media/ai-agent-use-cases-our-office/busy-office.png",
+        "alt": "Screenshot of the middle of our real Munder Difflin office floor in the Classic view: seven agents on a green tiled floor among desks, each with a name label, Jim, Angela, Ryan, Stanley, Creed, Dwight and Kevin. Thought bubbles above them read idle and starting up.",
+        "prompt": "",
+        "status": "ready"
+      }
+    }
+  },
+  "claude-code-skills": {
+    "title": "Claude Code skills",
+    "category": "guides",
+    "hero": {
+      "file": "assets/media/claude-code-skills/hero.png",
+      "alt": "Title card on white. Claude Code skills in large ink type, a kicker reading What they are, where they live, how to write one, a Checked 14 Oct 2026 pill and a yellow folder with a SKILL.md sheet sticking out.",
+      "prompt": "Still of the hero scene in assets/media/claude-code-skills/motion.js.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "claude-code-router": {
+    "title": "Claude Code Router",
+    "category": "concepts",
+    "hero": {
+      "file": "assets/media/claude-code-router/hero.png",
+      "alt": "Title card on white. Claude Code Router in large ink type, with a kicker and a Checked 14 Oct 2026 chip, beside a paper plane trailing a dotted loop.",
+      "prompt": "Still of the hero scene in assets/media/claude-code-router/motion.js.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "agent-tools-today-2026-10-15": {
+    "title": "Agent Tools Today, 15 Oct 2026: OpenCode 2.0, Hermes Agent v0.22.0, a Lost TV Season",
+    "category": "news",
+    "hero": {
+      "file": "assets/media/agent-tools-today/hero.png",
+      "alt": "Hand drawn sketch: a front page with five numbered lines, a clock, and a yellow character reading it out",
+      "prompt": "Series hero for the Agent Tools Today daily brief, drawn in code (media-src/topic-tiles.html?t=news). Reused by every brief.",
+      "status": "ready"
+    },
+    "inline": {},
+    "youtube": []
+  },
+  "muse-code-vs-claude-code": {
+    "title": "Muse Code vs Claude Code",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/muse-code-vs-claude-code/hero.png",
+      "alt": "Title card on white. The words Muse Code vs Claude Code in large ink type above a Checked 14 Oct 2026 pill, with two spinning tops facing each other.",
+      "prompt": "Still of the hero scene in assets/media/muse-code-vs-claude-code/motion.js.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "opencode-2-0": {
+    "title": "OpenCode 2.0: what changed and how to upgrade",
+    "category": "concepts",
+    "hero": {
+      "file": "assets/media/opencode-2-0/hero.png",
+      "alt": "Title card on white. OpenCode 2.0 in large ink type under the kicker What changed, a Checked 15 Oct 2026 pill, and a weathervane turning in the wind.",
+      "prompt": "Still of the hero scene in assets/media/opencode-2-0/motion.js.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "opencode-alternatives": {
+    "title": "OpenCode Alternatives: 7 Coding Agents to Switch To",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/opencode-alternatives/hero.png",
+      "alt": "Title card on white. \"OpenCode Alternatives\" in large ink type under the kicker \"7 coding agents to switch to\", a \"Checked 15 Oct 2026\" pill, and a snow globe holding a tiny terminal window and two pine trees while snow falls.",
+      "prompt": "Code drawn title card, motion standard (15 Oct 2026).",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "claude-code-best-practices": {
+    "title": "Claude Code Best Practices: 9 Habits From Anthropic's Docs",
+    "category": "guides",
+    "hero": {
+      "file": "assets/media/claude-code-best-practices/hero.png",
+      "alt": "Title card on white. 'Claude Code Best Practices' in large ink type, the kicker '9 Habits From Anthropic's Docs', a 'Checked 15 Oct 2026' pill, and a small bonsai tree in a blue pot.",
+      "prompt": "Code drawn title card, motion standard (15 Oct 2026).",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "agent-tools-today-2026-10-16": {
+    "title": "Agent Tools Today, 16 Oct 2026: Muse Spark Open, Tiny Little Office, OpenCode Ends Sharing",
+    "category": "news",
+    "hero": {
+      "file": "assets/media/agent-tools-today/hero.png",
+      "alt": "Hand drawn sketch: a front page with five numbered lines, a clock, and a yellow character reading it out",
+      "prompt": "Series hero for the Agent Tools Today daily brief, drawn in code (media-src/topic-tiles.html?t=news). Reused by every brief.",
+      "status": "ready"
+    },
+    "inline": {},
+    "youtube": []
+  },
+  "agent-tools-today-2026-10-17": {
+    "title": "Agent Tools Today, 17 Oct 2026: Muse Spark Open on Mac Studio, StarSkirmish, Claude Design Closes",
+    "category": "news",
+    "hero": {
+      "file": "assets/media/agent-tools-today/hero.png",
+      "alt": "Hand drawn sketch: a front page with five numbered lines, a clock, and a yellow character reading it out",
+      "prompt": "Series hero for the Agent Tools Today daily brief, drawn in code (media-src/topic-tiles.html?t=news). Reused by every brief.",
+      "status": "ready"
+    },
+    "inline": {},
+    "youtube": []
+  },
+  "agent-tools-today-2026-10-18": {
+    "title": "Agent Tools Today, 18 Oct 2026: LeanREA Takes On REA, FLUX 3 Image Klein, Hy Memory",
+    "category": "news",
+    "hero": {
+      "file": "assets/media/agent-tools-today/hero.png",
+      "alt": "Hand drawn sketch: a front page with five numbered lines, a clock, and a yellow character reading it out",
+      "prompt": "Series hero for the Agent Tools Today daily brief, drawn in code (media-src/topic-tiles.html?t=news). Reused by every brief.",
+      "status": "ready"
+    },
+    "inline": {},
+    "youtube": []
+  },
+  "what-is-roo-code": {
+    "title": "What Is Roo Code? The Archived VS Code Agent, Explained",
+    "category": "concepts",
+    "hero": {
+      "file": "assets/media/what-is-roo-code/hero.png",
+      "alt": "Title card on white. \"What Is Roo Code?\" in large ink type with a \"Checked 17 Oct 2026\" pill, beside a museum display case holding a code tile on a plinth marked v3.54.0, with a rope barrier.",
+      "prompt": "Code drawn title card, motion standard (17 Oct 2026).",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "deepseek-v4-1-flash-1017": {
+    "title": "DeepSeek V4.1 Flash 1017: What Changed, the Price and Claude Code Setup",
+    "category": "concepts",
+    "hero": {
+      "file": "assets/media/deepseek-v4-1-flash-1017/hero.png",
+      "alt": "Title image: DeepSeek V4.1 Flash 1017, what changed, price and setup, checked 17 Oct 2026, beside a stopwatch whose hand has swept most of the way round.",
+      "prompt": "Still of the hero scene in assets/media/deepseek-v4-1-flash-1017/motion.js.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "what-is-nanoclaw": {
+    "title": "What Is NanoClaw? The Small OpenClaw Alternative That Runs Agents in Containers",
+    "category": "concepts",
+    "hero": {
+      "file": "assets/media/what-is-nanoclaw/hero.png",
+      "alt": "What is NanoClaw: three chat app tiles labelled WhatsApp, Telegram and Slack are wired on white into a box labelled container, with a yellow agent tile inside.",
+      "prompt": "Still of the hero scene in assets/media/what-is-nanoclaw/motion.js.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "what-is-zeroclaw": {
+    "title": "What Is ZeroClaw? The Single Binary Agent Runtime in Rust, Explained",
+    "category": "concepts",
+    "hero": {
+      "file": "assets/media/what-is-zeroclaw/hero.png",
+      "alt": "What is ZeroClaw: a yellow hexagon labelled ZeroClaw on white, wired to three tiles labelled models, channels and tools.",
+      "prompt": "Still of the hero scene in assets/media/what-is-zeroclaw/motion.js.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "agent-tools-today-2026-10-19": {
+    "title": "Agent Tools Today, 19 Oct 2026: DeepSeek Search API, Sphinx, OpenClaw 2026.10.5",
+    "category": "news",
+    "hero": {
+      "file": "assets/media/agent-tools-today/hero.png",
+      "alt": "Hand drawn sketch: a front page with five numbered lines, a clock, and a yellow character reading it out",
+      "prompt": "Series hero for the Agent Tools Today daily brief, drawn in code (media-src/topic-tiles.html?t=news). Reused by every brief.",
+      "status": "ready"
+    },
+    "inline": {},
+    "youtube": []
+  },
+  "hermes-agent-alternatives": {
+    "title": "Hermes Agent Alternatives: 7 Picks for Chat, Code and Cloud",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/hermes-agent-alternatives/hero.png",
+      "alt": "Title card on white. The title Hermes Agent alternatives in large ink type, a 7 picks for chat, code and cloud kicker, a Checked 19 Oct 2026 line and a paper plane trailing a dashed loop.",
+      "prompt": "Title card: the hero scene in assets/media/hermes-agent-alternatives/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "kilo-code-vs-cline": {
+    "title": "Kilo Code vs Cline: Two Open Source Coding Agents Compared",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/kilo-code-vs-cline/hero.png",
+      "alt": "Title card on white. The title Kilo Code vs Cline in large ink type, a Two open source coding agents kicker, a Checked 19 Oct 2026 line, and a blue paddle and a lilac paddle trading a ball over a mint table.",
+      "prompt": "Title card: the hero scene in assets/media/kilo-code-vs-cline/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "codex-vs-gemini-cli": {
+    "title": "Codex vs Gemini CLI: Which Terminal Agent Still Fits in Oct 2026?",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/codex-vs-gemini-cli/hero.png",
+      "alt": "Title card on white. The title Codex vs Gemini CLI in large ink type over a yellow underline, a Comparisons pill, a kicker reading Plans, limits, who can use each, a Checked 19 Oct 2026 line and a paper cup string telephone.",
+      "prompt": "Title card: the hero scene in assets/media/codex-vs-gemini-cli/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "cursor-vs-cline": {
+    "title": "Cursor vs Cline: A Paid Editor and an Open Source Agent Compared",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/cursor-vs-cline/hero.png",
+      "alt": "Title card on white. A Comparisons pill, the title Cursor vs Cline in large ink type over a yellow underline, the line A paid editor and an open source agent, a Checked 19 Oct 2026 tag, and a pinwheel with yellow, blue, lilac and mint blades on a stick.",
+      "prompt": "Title card: the hero scene in assets/media/cursor-vs-cline/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "cline-alternatives": {
+    "title": "Cline Alternatives: 6 Picks and 2 Names to Skip (Oct 2026)",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/cline-alternatives/hero.png",
+      "alt": "Title card on white. A pill reading 6 picks and 2 names to skip, the title Cline alternatives in large ink type over a yellow underline, a Checked 19 Oct 2026 line, and two dice: a big yellow die showing six and a small grey die showing two.",
+      "prompt": "Title card: the hero scene in assets/media/cline-alternatives/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "agent-tools-today-2026-10-21": {
+    "title": "Agent Tools Today, 21 Oct 2026: DeepInfer, Voxtral 3, Claude Code 2.1.305",
+    "category": "news",
+    "hero": {
+      "file": "assets/media/agent-tools-today/hero.png",
+      "alt": "Hand drawn sketch: a front page with five numbered lines, a clock, and a yellow character reading it out",
+      "prompt": "Series hero for the Agent Tools Today daily brief, drawn in code (media-src/topic-tiles.html?t=news). Reused by every brief.",
+      "status": "ready"
+    },
+    "inline": {},
+    "youtube": []
+  },
+  "litellm-1-107-0-compromise": {
+    "title": "LiteLLM 1.107.0 Compromise: What It Steals and How to Check Your Machine",
+    "category": "guides",
+    "hero": {
+      "file": "assets/media/litellm-1-107-0-compromise/hero.png",
+      "alt": "Title card on white. A pill reading Security, the title LiteLLM 1.107.0 in large ink type, the line What it steals and how to check, a Checked 21 Oct 2026 line, and a parcel box with a 1.107.0 tag whose yellow tape seal has split open.",
+      "prompt": "Title card: the hero scene in assets/media/litellm-1-107-0-compromise/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "what-is-claude-duet": {
+    "title": "What Is Claude Duet? Anthropic's Proactive Agent App, Explained",
+    "category": "concepts",
+    "hero": {
+      "file": "assets/media/what-is-claude-duet/hero.png",
+      "alt": "Title card on white. A pill reading Launch, the title Claude Duet in large ink type, the line Anthropic's proactive agent app, a Checked 22 Oct 2026 line, and a yellow sun rising behind a small fanned stack of white cards with a sky blue bell beside them.",
+      "prompt": "Title card: the hero scene in assets/media/what-is-claude-duet/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "agent-tools-today-2026-10-22": {
+    "title": "Agent Tools Today, 22 Oct 2026: Claude API 2026-10-21, LayerFS 1.0, PHP2Shell",
+    "category": "news",
+    "hero": {
+      "file": "assets/media/agent-tools-today/hero.png",
+      "alt": "Hand drawn sketch: a front page with five numbered lines, a clock, and a yellow character reading it out",
+      "prompt": "Series hero for the Agent Tools Today daily brief, drawn in code (media-src/topic-tiles.html?t=news). Reused by every brief.",
+      "status": "ready"
+    },
+    "inline": {},
+    "youtube": []
+  },
+  "claude-api-version-2026-10-21": {
+    "title": "Claude API Version 2026-10-21: What Breaks and How to Upgrade",
+    "category": "guides",
+    "hero": {
+      "file": "assets/media/claude-api-version-2026-10-21/hero.png",
+      "alt": "Title card on white. A pill reading API, the title Claude API 2026-10-21 in large ink type, the subtitle What breaks and how to upgrade, a Checked 22 Oct 2026 line, and a white envelope that a rubber stamp marks with the date 2026-10-21 in blue over a faded 2023-06-01 stamp.",
+      "prompt": "Title card: the hero scene in assets/media/claude-api-version-2026-10-21/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "claude-duet-alternatives": {
+    "title": "Claude Duet Alternatives: 4 AI Agents You Can Use Today, No Waitlist",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/claude-duet-alternatives/hero.png",
+      "alt": "Title card on white. A pill reading Alternatives, the title Claude Duet alternatives, the line Proactive agents with no waitlist and a Checked 22 Oct 2026 line. Beside them a queue of numbered tickets under a Waitlist sign, and four lanes that light up one by one, each tagged Open now.",
+      "prompt": "Title card: the hero scene in assets/media/claude-duet-alternatives/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "claude-duet-vs-munder-difflin": {
+    "title": "Claude Duet vs Munder Difflin: One Agent in the Cloud or a Team on Your Computer",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/claude-duet-vs-munder-difflin/hero.png",
+      "alt": "Title card on white. A pill reading Versus, the title Claude Duet vs Munder Difflin, the line One agent in the cloud, or a team on your computer and a Checked 22 Oct 2026 line. On the left a cloud holds one card; on the right four small terminal windows type, with a yellow vs chip between them.",
+      "prompt": "Title card: the hero scene in assets/media/claude-duet-vs-munder-difflin/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "build-your-own-claude-duet": {
+    "title": "Build Your Own Claude Duet: A Free Morning Brief Agent",
+    "category": "guides",
+    "hero": {
+      "file": "assets/media/build-your-own-claude-duet/hero.png",
+      "alt": "Title card on white. A pill reading Guide, the title Build your own Claude Duet, the line A free morning brief for your codebase and a Checked 22 Oct 2026 line. A yellow sun rises behind a terminal that prints Morning brief, Pull requests, Checks and Issues, beside a calendar tile reading 08:00.",
+      "prompt": "Title card: the hero scene in assets/media/build-your-own-claude-duet/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "claude-duet-for-developers": {
+    "title": "Is Claude Duet Good for Developers? What It Does With Code and What It Doesn't",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/claude-duet-for-developers/hero.png",
+      "alt": "Title card on white. A pill reading Developers, the title Is Claude Duet good for developers?, the line What it does with code, and what it doesn't and a Checked 22 Oct 2026 line. A balance scale holds an inbox tray on one pan and a code block on the other and settles level.",
+      "prompt": "Title card: the hero scene in assets/media/claude-duet-for-developers/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "claude-duet-waitlist": {
+    "title": "Claude Duet Waitlist: Who Gets In First, and What to Use Meanwhile",
+    "category": "guides",
+    "hero": {
+      "file": "assets/media/claude-duet-waitlist/hero.png",
+      "alt": "Title card on white. A pill reading Access, the title Claude Duet waitlist, the line Who gets in first, and what to use meanwhile and a Checked 22 Oct 2026 line. Envelopes move along a rail; one lifts out and opens to a card reading You're in.",
+      "prompt": "Title card: the hero scene in assets/media/claude-duet-waitlist/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "agent-tools-today-2026-10-23": {
+    "title": "Agent Tools Today, 23 Oct 2026: Claude Duet, OpenAI CLI, Nvidia OpenShell",
+    "category": "news",
+    "hero": {
+      "file": "assets/media/agent-tools-today/hero.png",
+      "alt": "Hand drawn sketch: a front page with five numbered lines, a clock, and a yellow character reading it out",
+      "prompt": "Series hero for the Agent Tools Today daily brief, drawn in code (media-src/topic-tiles.html?t=news). Reused by every brief.",
+      "status": "ready"
+    },
+    "inline": {},
+    "youtube": []
+  },
+  "claude-duet-app": {
+    "title": "Claude Duet App: iPhone, Android and Web, and How to Get It",
+    "category": "guides",
+    "hero": {
+      "file": "assets/media/claude-duet-app/hero.png",
+      "alt": "Title card on white. A pill reading App, the title Claude Duet app, the line iPhone, Android and web and a Checked 23 Oct 2026 line. A phone outline, a second phone outline and a browser window light up in turn, joined by a dotted line to a small card reading Claude Duet.",
+      "prompt": "Title card: the hero scene in assets/media/claude-duet-app/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "ai-agent-office-github": {
+    "title": "Open Source AI Agent Office Apps on GitHub (Oct 2026)",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/ai-agent-office-github/hero.png",
+      "alt": "Title card on white. A pill reading GitHub, the title AI agent office apps, the line Open source, on GitHub and a Checked 23 Oct 2026 line. An office floor plan seen from above, with desks labelled Research, Write and Review, sends small cards to a board in turn.",
+      "prompt": "Title card: the hero scene in assets/media/ai-agent-office-github/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "black-october-php2shell": {
+    "title": "Black October: What PHP2Shell Is and How to Patch (Oct 2026)",
+    "category": "news",
+    "hero": {
+      "file": "assets/media/black-october-php2shell/hero.png",
+      "alt": "Title card on white. A pill reading Security, the title Black October, the line What PHP2Shell is and how to patch and a Checked 23 Oct 2026 line. A white server rack with four slots labelled 8.5.12, 8.4.27, 8.3.36 and 8.2.35 lights a green tick beside each slot in turn.",
+      "prompt": "Title card: the hero scene in assets/media/black-october-php2shell/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "agent-tools-today-2026-10-26": {
+    "title": "Agent Tools Today, 26 Oct 2026: Kimi K3.1 Pro, Unified Claude Enterprise, ThinkRail",
+    "category": "news",
+    "hero": {
+      "file": "assets/media/agent-tools-today/hero.png",
+      "alt": "Hand drawn sketch: a front page with five numbered lines, a clock, and a yellow character reading it out",
+      "prompt": "Series hero for the Agent Tools Today daily brief, drawn in code (media-src/topic-tiles.html?t=news). Reused by every brief.",
+      "status": "ready"
+    },
+    "inline": {},
+    "youtube": []
+  },
+  "codex-alternatives": {
+    "title": "Codex Alternatives: 7 Picks Beyond OpenAI's Agent (Oct 2026)",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/codex-alternatives/hero.png",
+      "alt": "Title card on white. A pill reading Alternatives, the title Codex alternatives, the line 7 picks beyond OpenAI's agent and a Checked 26 Oct 2026 line. Seven small tiles named Claude Code, Munder Difflin, Copilot CLI, OpenCode, Goose, Cline and Cursor slide in under a grey tile labelled Codex.",
+      "prompt": "Title card: the hero scene in assets/media/codex-alternatives/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "cursor-pricing": {
+    "title": "Cursor Pricing (Oct 2026): Every Plan After the 12 Oct Change",
+    "category": "guides",
+    "hero": {
+      "file": "assets/media/cursor-pricing/hero.png",
+      "alt": "Title card on white. A pill reading Pricing, the title Cursor pricing, the line Every plan after the 12 Oct change and a Checked 26 Oct 2026 line. Five price tags on a string, $0, $8, $30, $100 and $200, swing gently into place.",
+      "prompt": "Title card: the hero scene in assets/media/cursor-pricing/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "pi-agent-alternatives": {
+    "title": "Pi Agent Alternatives: 7 Coding Agents to Try (Oct 2026)",
+    "category": "comparisons",
+    "hero": {
+      "file": "assets/media/pi-agent-alternatives/hero.png",
+      "alt": "Title card on white. A pill reading Alternatives, the title Pi agent alternatives, the line 7 coding agents to try and a Checked 26 Oct 2026 line. Seven small tiles named OpenCode, Munder Difflin, Claude Code, Codex CLI, Hermes Agent, Goose and Crush slide in under a grey tile labelled Pi.",
+      "prompt": "Title card: the hero scene in assets/media/pi-agent-alternatives/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "claude-md-best-practices": {
+    "title": "CLAUDE.md Best Practices: What to Write, Where It Lives, How Long (Oct 2026)",
+    "category": "guides",
+    "hero": {
+      "file": "assets/media/claude-md-best-practices/hero.png",
+      "alt": "Title card on white. A pill reading Guide, the title CLAUDE.md best practices, the line What to write, where it lives, how long and a Checked 26 Oct 2026 line, beside a white sheet with five short ruled lines and a yellow mark labelled Under 200 lines.",
+      "prompt": "Title card: the hero scene in assets/media/claude-md-best-practices/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "codex-computer-use": {
+    "title": "Codex Computer Use: How to Turn It On, Plans and Limits (Oct 2026)",
+    "category": "guides",
+    "hero": {
+      "file": "assets/media/codex-computer-use/hero.png",
+      "alt": "Title card on white. A pill reading Guide, the title Codex computer use, the line Setup, plans and limits and a Checked 26 Oct 2026 line, beside a simple white desktop window where a blue pointer arrow clicks a mint toggle.",
+      "prompt": "Title card: the hero scene in assets/media/codex-computer-use/motion.js, shot at 1600 by 900.",
+      "status": "ready"
+    },
+    "inline": {}
+  },
+  "gpt-6-1-terra": {
+    "title": "GPT-6.1 Terra: Price, Specs and How to Use It in Codex (Oct 2026)",
+    "category": "concepts",
+    "hero": {
+      "file": "assets/media/gpt-6-1-terra/hero.png",
+      "alt": "Title card on white. GPT-6.1 Terra in large ink type, a Concepts pill, the line Price, specs and Codex setup, Checked 27 Oct 2026, and a white card with a picture, a pointer arrow and a pencil beside a yellow tag reading $1 in, $5 out",
+      "prompt": "Still of the hero scene in assets/media/gpt-6-1-terra/motion.js.",
       "status": "ready"
     },
     "inline": {}

@@ -62,7 +62,7 @@ Barely: the repo is not archived, but its last commit on main landed on 22 May 2
 
 ## Which models can Aider and Claude Code use?
 
-Aider can use almost any model, and Claude Code is built for Claude only. Aider connects through LiteLLM to hundreds of models, including local ones through Ollama or any OpenAI compatible server. Claude Code runs Claude through Anthropic, Amazon Bedrock, Claude Platform on AWS, Google Cloud's Agent Platform or Microsoft Foundry, and Anthropic's [gateway docs](https://code.claude.com/docs/en/llm-gateway) say it "doesn't support routing Claude Code to non-Claude models through any gateway." People point it at Ollama anyway; our [Ollama and Claude Code guide](/blog/how-to-connect-ollama-to-claude-code/) covers what breaks when you do.
+Aider can use almost any model, and Claude Code is built for Claude only. Aider connects through LiteLLM to hundreds of models, including local ones through Ollama or any OpenAI compatible server. A bad LiteLLM release reached PyPI on 21 Oct 2026; see [the LiteLLM 1.107.0 compromise](/blog/litellm-1-107-0-compromise/) for who was exposed. Claude Code runs Claude through Anthropic, Amazon Bedrock, Claude Platform on AWS, Google Cloud's Agent Platform or Microsoft Foundry, and Anthropic's [gateway docs](https://code.claude.com/docs/en/llm-gateway) say it "doesn't support routing Claude Code to non-Claude models through any gateway." People point it at Ollama anyway; our [Ollama and Claude Code guide](/blog/how-to-connect-ollama-to-claude-code/) covers what breaks when you do.
 
 ## Is Aider cheaper than Claude Code?
 
@@ -81,7 +81,7 @@ Four sensible moves, depending on what you liked about Aider:
 1. **Claude Code**, if you want more autonomy and Claude models suit you. You trade a commit per edit for checkpoints, and you decide when to commit.
 2. **[Munder Difflin](https://harnessmd.com/download)**, if you are picking Claude Code and will want more than one session going. It is a free and open source desktop app that runs Claude Code agents side by side, each in a real terminal and optionally its own git worktree, with long term memory and a shared task board (todo, doing, blocked, done). Aider is not a built in engine as of 0.5.2. You can type `aider` into the Custom engine, but that agent gets no hooks, so the app cannot tell when it is idle and messages to it go back to the orchestrator.
 3. **[OpenCode](/blog/what-is-opencode/)**, if model choice was the point. It is MIT licensed, and its docs say it supports 75+ LLM providers and local models, checked 15 Sep 2026.
-4. **cecli**, if you want to stay on Aider's codebase. This GitHub fork of Aider (Apache 2.0, formerly aider-ce) published v1.5.1 on 12 Sep 2026, and its README links docs for MCP configuration and subagents. We have not tested it.
+4. **cecli**, if you want to stay on Aider's codebase. This GitHub fork of Aider (Apache 2.0, formerly aider-ce) published v1.5.1 on 12 Sep 2026, and its README links docs for MCP configuration and subagents.
 
 ## Should you choose Aider or Claude Code today?
 

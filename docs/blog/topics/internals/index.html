@@ -114,11 +114,13 @@
   <div class="filters" role="navigation" aria-label="Topics">
     <a class="chip" href="/blog/">All</a>
     
-    <a class="chip" href="/blog/topics/guides/">guides<span class="ct">47</span></a>
+    <a class="chip" href="/blog/topics/comparisons/">comparisons<span class="ct">75</span></a>
     
-    <a class="chip" href="/blog/topics/concepts/">concepts<span class="ct">43</span></a>
+    <a class="chip" href="/blog/topics/guides/">guides<span class="ct">62</span></a>
     
-    <a class="chip" href="/blog/topics/comparisons/">comparisons<span class="ct">40</span></a>
+    <a class="chip" href="/blog/topics/concepts/">concepts<span class="ct">60</span></a>
+    
+    <a class="chip" href="/blog/topics/news/">news<span class="ct">36</span></a>
     
     <a class="chip" href="/blog/topics/internals/" aria-current="page">internals<span class="ct">19</span></a>
     
@@ -127,8 +129,6 @@
     <a class="chip" href="/blog/topics/orchestration/">orchestration<span class="ct">9</span></a>
     
     <a class="chip" href="/blog/topics/use-cases/">use-cases<span class="ct">9</span></a>
-    
-    <a class="chip" href="/blog/topics/news/">news<span class="ct">7</span></a>
     
     <a class="chip" href="/blog/topics/memory/">memory<span class="ct">5</span></a>
     
@@ -485,9 +485,10 @@
       if (!btn) return;
       var box = btn.closest('.yt');
       var id = box && box.getAttribute('data-yt');
-      if (!id) return;
+      // Only an 11 character YouTube video id may reach the iframe URL.
+      if (!id || !/^[A-Za-z0-9_-]{11}$/.test(id)) return;
       var frame = document.createElement('iframe');
-      frame.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1';
+      frame.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1';
       frame.title = box.getAttribute('data-title') || 'YouTube video';
       frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
       frame.setAttribute('allowfullscreen', '');
